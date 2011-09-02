@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<html lang="JP">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+	<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="/css/basic.css?20110421" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="/js/jquery.treeview.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/jquery.treeview.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/pagetop.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/smartRollover.js" type="text/javascript" charset="utf-8"></script>
+	<title>航空ファン・飛行機利用者のためのサイト FlyTeam(フライチーム)</title>
+	<script type="text/javascript">
+		$(function() {
+			$("#tree").treeview({
+				collapsed: true,
+				animated: "fast",
+				control:"#sidetreecontrol",
+				prerendered: true,
+				persist: "location"
+			});
+		})
+		
+	</script>
+</head>
+<body>
+
+	<div class="header">
+		<div class="header-cont">
+			<div class="header-upper">
+				<h1>FlyTeam(フライチーム)は、航空ファン・飛行機利用者のためのサイトです。</h1>
+				<div class="header-nav">
+					<ul>
+						<li>ようこそ <a href="/member/ken_c_lo"><strong>ken_c_lo</strong></a>さん</li>
+						<li><a href="/control_tower">管理画面</a></li>
+						<li><a href="https://flyteam.jp/control_tower/logout">ログアウト</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="header-middle">
+				<p class="logo"><a href="/"><img src="/img/logo.png"  alt="航空ファン・航空機利用者のためのサイト FlyTeam(フライチーム)"></a></p>
+				<div class="header-ads"><a href="http://www.motionlink.jp/clk.php?pt=P0040172-0001&cl=C1111653-0012&uid=" target="_blank"><img src="http://www.motionlink.jp/bnr.php?pt=P0040172-0001&cl=C1111653-0012&bc=s1" border="0"></a><br /><a href="http://www.motionlink.jp/clk.php?pt=P0040172-0001&cl=C1111653-0012&uid=" target="_blank">コンチネンタル航空とJCBのおトクな1枚！</a>
+				</div>
+			</div>
+		</div>
+		<div class="global-nav">
+			<ul>
+				<li><a href="/news">ニュース</a></li>
+				<li class="active"><a href="/airlines">航空会社</a></li>
+				<li><a href="/airline_routes">路線</a></li>
+				<li><a href="/airports">空港</a></li>
+				<li><a href="/aircrafts">機材</a></li>
+				<li><a href="/members">メンバー</a></li>
+				<li><a href="/photos">航空フォト</a></li>
+				<li><a href="/reviews">搭乗レビュー</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="parent-container">
+		<div class="container">
+			<!-- パンくず -->
+			<div class="nav-topicpath">
+				<ul>
+					<li><a href="/">ホーム</a></li>
+					<li><a href="#">航空会社（エアライン）</a></li>
+					<li>日本航空 (Japan Airlines)</li>
+				</ul>
+			</div>
+			<!-- 左カラム（2ペイン） -->
+			<div class="box-main">
+			<!-- ▼▼▼▼▼CONTENTS▼▼▼▼▼ -->
+			
+			<!-- ▲▲▲▲▲CONTENTS▲▲▲▲▲ -->
+			</div>
+			<!-- 右カラム -->
+			<div class="box-right">
+				<!-- 会員 ログイン済み -->
+				<div class="section side-member-box">
+					<p class="side-member-title"><a href="/control_tower"><img src="/img/member_title.gif" alt="FlyTeam 管理画面" /></a></p>
+					<div class="inner">
+						<p class="image"><a href="/member/ken_c_lo"><img src="http://img.flyteam.jp/img/member/0/1/1_70x70_20100701172530.jpg" alt="" /></a></p>
+						<div class="side-member-box-text">
+							<p class="pre-name num">WELCOME!</p>
+							<p class="name"><a href="/member/ken_c_lo"><strong>うっきー</strong><span class="num">さん</span></a></p>
+							<div class="action">
+								<ul>
+									<li class="side-member-box-ct"><a href="/control_tower">管理画面</a></li>
+									<li class="side-member-box-logout"><a href="https://flyteam.jp/control_tower/logout">ログアウト</a></li>
+									<li class="side-member-box-photo"><a href="/control_tower/photo_add">フォトを投稿</a></li>
+									<li class="side-member-box-review"><a href="/control_tower/flight_add">レビューを投稿</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 会員 未ログイン時 -->
+				<div class="section side-member-box init">
+					<p class="side-member-title"><a href="https://flyteam.jp/control_tower/login"><img src="/img/member_title.gif" alt="FlyTeam ログイン" /></a></p>
+					<div class="inner">
+						<div class="side-member-box-text">
+							<p class="pre-name num">WELCOME!</p>
+							<p class="name"><strong>ゲスト</strong><span class="num">さん</span></p>
+							<div class="action">
+								<ul>
+									<li class="side-member-box-logout"><a href="/control_tower">ログイン</a></li>
+									<li class="side-member-box-beginner"><a href="https://flyteam.jp/control_tower/logout">新規会員登録</a></li>
+								</ul>
+							</div>
+							<div class="side-member-box-about">
+								<p class="side-member-box-about-copy">FlyTeamメンバー登録をすると…</p>
+								<ol class="simple-list">
+									<li><strong>航空フォト</strong>の投稿・公開・管理ができる！</li>
+									<li><strong>搭乗レビュー</strong>の投稿・公開ができる！</li>
+									<li><strong>コミュニケーション</strong>・情報交換ができる！</li>
+								</ol>
+								<p class="continues"><a href="https://flyteam.jp/control_tower/login#explain">さらに詳しくはこちら</a></p>
+								<p class="btn-common blue"><a href="https://flyteam.jp/reg">今すぐメンバー登録（無料）</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Google Ads -->
+				<div class="section">
+					<script type="text/javascript"><!--
+					google_ad_client = "pub-3578152824462829";
+					/* 250x250, FlyTeam 10/06/28 */
+					google_ad_slot = "9626468877";
+					google_ad_width = 250;
+					google_ad_height = 250;
+					//-->
+					</script>
+					<script type="text/javascript"
+					src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+					</script>
+				</div>
+				<!-- 検索BOX -->
+				<div class="section side-search-box">
+					<div class="inner">
+						<h3>サイト内検索</h3>
+						<form action="http://flyteam.jp/search/g" id="cse-search-box">
+  					<div class="inner">
+  						<div class="form-wrapper">
+    						<input type="hidden" name="cx" value="partner-pub-3578152824462829:1919824454" />
+    						<input type="hidden" name="cof" value="FORID:9" />
+    						<input type="hidden" name="ie" value="UTF-8" />
+   							<input type="hidden" name="ref" value="airlines" />
+    						<input type="text" name="q" size="12" class="form-textarea" />
+    						<input type="submit" name="sa" value="検索" class="form-submit" />
+  						</div>
+							<p class="explain side-search-box-line">サイト内のキーワード検索です。</p>
+  					</div>
+						</form>
+						<script type="text/javascript" src="http://www.google.co.jp/coop/cse/brand?form=cse-search-box&amp;lang=ja"></script>
+						<h3>２,３レターコード、レジ検索</h3>
+						<div class="inner">
+							<p class="explain">航空会社、空港、機体番号（レジ）の検索です。</p>
+							<div class="form-wrapper">
+								<form method="get" action="/search"><input name="q" type="text" size="12" value="" id="RegNumberQ" class="form-textarea" placeholder="例：HNL、RJTT、JAL、JL、JA8089 etc" /><input type="hidden" name="ref" size="12" value="airlines" id="RegNumberRef" /><input type="submit" label="" value="検索" class="form-submit"/>
+								</form>
+							</div>
+							<p class="explain">例：HNL、RJTT、JAL、JL、JA8089 etc</p>
+						</div>
+					</div>
+				</div>
+				<!-- ニュース -->
+				<div class="ranking_box section section-sidebar">
+					<h3><a href="/news/access">人気ニュースランキング</a></h3>
+					<div class="inner">
+						<ul class="list-stripe news_list">
+							<li><span class="lank"><span class="num">1</span>位</span> <a href="/news/article/3710">シンガポール航空CEOが平謝りも火に油-ウェブ・リニューアルが原因</a></li>
+							<li><span class="lank"><span class="num">2</span>位</span> <a href="/news/article/3690">「エアアジアとANAが提携へ」と報じられる-日本国内線に参入か？</a></li>
+							<li><span class="lank"><span class="num">3</span>位</span> <a href="/news/article/3699">B787の来日した「N787EX」、デリーからボーイングフィールドへ</a></li>
+							<li><span class="lank"><span class="num">4</span>位</span> <a href="/news/article/3704">スカイマーク、9月後半にも5800円運賃を設定-就航17路線で</a></li>
+							<li><span class="lank"><span class="num">5</span>位</span> <a href="/news/article/3711">乗客乗せずにフライトする路線を整理へ-デルタのアメリカ24空港</a></li>
+						</ul>
+						<p class="continues"><a href="/news/access">もっと見る</a></p>
+					</div>
+				</div>
+				<!-- サービス一覧 -->
+				<div class="section section-sidebar">
+					<h3>FlyTeamのサービス</h3>
+					<div class="inner">
+						<p>FlyTeam(フライチーム)のサービス一覧です。</p>
+						<ul class="list_link mgntop10">
+							<li><a href="/news">ニュース</a></li>
+							<li><a href="/photos">航空フォト</a></li>
+							<li><a href="/reviews">搭乗レビュー</a></li>
+							<li><a href="/members">メンバー</a></li>
+							<li><a href="/airlines">航空会社（エアライン）</a></li>
+							<li><a href="/airports">空港（エアポート）</a></li>
+							<li><a href="/aircraft">航空機材（エアクラフト）</a></li>
+							<li><a href="/area">エリア別</a></li>
+							<li><a href="/alliance">アライアンス別</a></li>
+							<li><a href="/ffps">マイレージプログラム</a></li>
+							<li><a href="/airline_routes">航空路線</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- amazon -->
+				<div class="section">
+<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab" id="Player_aebd1fda-8692-4e11-b60f-aa31ac33c1dc"  WIDTH="250px" HEIGHT="250px"> <PARAM NAME="movie" VALUE="http://ws.amazon.co.jp/widgets/q?ServiceVersion=20070822&MarketPlace=JP&ID=V20070822%2FJP%2Fft079-22%2F8009%2Faebd1fda-8692-4e11-b60f-aa31ac33c1dc&Operation=GetDisplayTemplate"><PARAM NAME="quality" VALUE="high"><PARAM NAME="bgcolor" VALUE="#FFFFFF"><PARAM NAME="allowscriptaccess" VALUE="always"><embed src="http://ws.amazon.co.jp/widgets/q?ServiceVersion=20070822&MarketPlace=JP&ID=V20070822%2FJP%2Fft079-22%2F8009%2Faebd1fda-8692-4e11-b60f-aa31ac33c1dc&Operation=GetDisplayTemplate" id="Player_aebd1fda-8692-4e11-b60f-aa31ac33c1dc" quality="high" bgcolor="#ffffff" name="Player_aebd1fda-8692-4e11-b60f-aa31ac33c1dc" allowscriptaccess="always"  type="application/x-shockwave-flash" align="middle" height="250px" width="250px"></embed></OBJECT> <NOSCRIPT><A HREF="http://ws.amazon.co.jp/widgets/q?ServiceVersion=20070822&MarketPlace=JP&ID=V20070822%2FJP%2Fft079-22%2F8009%2Faebd1fda-8692-4e11-b60f-aa31ac33c1dc&Operation=NoScript">Amazon.co.jp ウィジェット</A></NOSCRIPT>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer-wrapper">
+		<p class="pagetop"><a href="#" onclick="backToTop(); return false">PageTop</a></p>
+		<div class="footer-nav">
+			<div class="footer-box-left">
+				<ul class="footer-nav-menu">
+					<li><h4 class="airlines"><a href="/airlines">世界の航空会社<span class="num">Airlines</span></h4></a>
+						<ul class="footer-nav-menu-sub">
+							<li><a href="#">JAL</a></li>
+							<li><a href="#">ANA</a></li>
+							<li><a href="#">KLM</a></li>
+							<li><a href="#">KLM</a></li>
+							<li><a href="#">JAL</a></li>
+							<li><a href="#">ANA</a></li>
+							<li><a href="#">KLM</a></li>
+							<li><a href="#">KLM</a></li>
+							<li><a href="#">KLM</a></li>
+							<li><a href="#">JAL</a></li>
+							<li><a href="#">ANA</a></li>
+							<li><a href="#">KLM</a></li>
+							<li><a href="#">KLM</a></li>
+							<li><a href="#">JAL</a></li>
+							<li><a href="#">ANA</a></li>
+							<li><a href="#">KLM</a></li>
+							<li><a href="#">KLM</a></li>
+							<li><a href="#">JAL</a></li>
+							<li><a href="#">JAL</a></li>
+							<li><a href="#">ANA</a></li>
+							<li><a href="#">KLM</a></li>
+							<li><a href="#">KLM</a></li>
+							<li><a href="#">JAL</a></li>
+						</ul>
+					</li>
+					<li><h4 class="airport"><a href="/airports">世界の空港<span class="num">Airport</span></a></h4></li>
+					<li><h4 class="route"><a href="/routes">世界の路線<span class="num">Route</span></a></h4></li>
+					<li><h4 class="aircraft"><a href="/aircrafts">機材<span class="num">Aircraft</span></a></h4>
+						<ul class="footer-nav-menu-sub">
+							<li><a href="/aircraft/airbus">エアバス</a></li>
+							<li><a href="/aircraft/boeing">ボーイング</a></li>
+							<li><a href="/aircraft/mcdonnell-douglas">マクドネル・ダグラス</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="footer-box-center">
+				<ul class="footer-nav-menu">
+					<li><h4 class="news"><a href="/news">航空ニュース<span class="num">News</span></a></h4></li>
+					<li><h4 class="photo"><a href="/photos">航空フォト<span class="num">Photos</span></a></h4>
+						<ul class="footer-nav-menu-sub">
+							<li><a href="/photos/ranking/24hour">アクセスランキング</a></li>
+							<li><a href="/photos/album">アルバム</a></li>
+						</ul>
+					</li>
+					<li><h4 class="review"><a href="/reviews">搭乗レビュー<span class="num">Review</span></a></h4>
+					</li>
+					<li><h4 class="member"><a href="/members">FlyTeamメンバー<span class="num">Member</span></a></h4>
+						<ul class="footer-nav-menu-sub">
+							<li><a href="/members/photo">写真の多い人</a></li>
+							<li><a href="/members/message">新着メッセージ</a></li>
+							<li><a href="/members/access">昨日のアクセス</a></li>
+							<li><a href="/members/comments">コメント一覧</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="simple-list footer-sub-menu">
+					<li><a href="/alliance">アライアンス</a></li>
+					<li><a href="/ffps">マイレージプログラム</a></li>
+					<li><a href="/area">エリア別に探す</a></li>
+					<li><a href="/area/asia/japan">日本の航空会社・空港</a></li>
+					<li><a href="/links">リンク集</a></li>
+				</ul>
+			</div>
+			<div class="footer-box-right">
+				<div class="footer-displayboard">
+					<p class="footer-logo"><a href="/"><img src="/img/logo_footer.png" alt="FlyTeam"/></a></p>
+				</div>
+				<div class="footer-box-right-lower">
+					<p class="footer-copy">観る派も、乗る派も。航空機好き集まれ！</p>
+					<p class="footer-copy-sub">FlyTeam（フライチーム）は航空ファン・飛行機利用者が集い、情報収集・交換するためのコミュニティサイトです。<a href="#">詳しくはこちら</a></p>
+					<div class="footer-box-right-lower-left">
+						<ul class="footer-nav-menu-social">
+							<li class="twitter"><a href="http://twitter.com/FlyTeamJp/" target="blank">FlyTeamJp</a></li>
+							<li class="twitter"><a href="http://twitter.com/FlyTeamNews/" target="blank">FlyTeamNews</a></li>
+							<li class="facebook"><a href="http://twitter.com/FlyTeamNews/" target="blank">FlyTeam</a></li>
+						</ul>
+						<ul class="simple-list footer-sub-menu">
+							<li><a href="/aboutus">このサイトについて</a></li>
+							<li><a href="/aboutus/link">リンクについて</a></li>
+							<li><a href="/docs/terms">利用規約</a></li>
+							<li><a href="/docs/privacy">プライバシーポリシー</a></li>
+						</ul>
+					</div>
+					<div class="footer-box-right-lower-right">
+						<dl class="dl-flapboard">
+							<dt>会員数<span class="num">Members</span></dt>
+							<dd><a href="/members"><span class="num">1,248</span>名</a></dd>
+							<dt>写真数<span class="num">Photos</span></dt>
+							<dd><a href="/photos"><span class="num">1,500,249</span>枚</a></dd>
+							<dt>掲載路線数<span class="num">Routes</span></dt>
+							<dd><a href="/routes"><span class="num">1,500,249</span>件</a></dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	<p class="copyright"><small>Copyright © 2010 - 2011 FlyTeam All rights reserved.</small></p>
+	</div>
+</body>
+</html>

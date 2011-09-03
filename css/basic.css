@@ -134,6 +134,7 @@ display: inline-block;
 	font-size: 12px;
 }
 .inner {
+	margin: 10px 0 0 0;
 }
 .inner p{
 	margin-bottom: 5px;
@@ -518,11 +519,11 @@ h2{
 }
 h2 a{
 	color: #333;
-	background: url(/img/csl_more.png) no-repeat right center;
+	background: url(/img/csl_m.gif) no-repeat right center;
 	padding-right: 12px;
 }
 h2 a:hover{
-	color: #000;
+	color: #0098dd;
 	text-decoration: none;
 }
 h3{
@@ -530,8 +531,21 @@ h3{
 	font-weight: bold;
 	line-height: 1.2em;
 	margin-bottom: 5px;
-	border-bottom: 1px solid #DDD;
-	padding-bottom: 5px;
+	background: #EEE;
+	padding: 5px;
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.7);
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+h3 a{
+	display: block;
+	color: #0178D8;
+	background: url(/img/csl_s.gif) no-repeat 2px center;
+	padding-left: 10px;
+}
+h3 a:hover{
+	text-decoration: none;
 }
 h4{
 	font-size: 14px;
@@ -558,6 +572,10 @@ h4{
 	margin-top: 20px;
 }
 .section-sub h3{
+	background:none;
+	border:none;
+	padding: 0;
+	margin:0;
 	border-bottom: none;
 	padding-bottom: 0;
 	border-bottom: none;
@@ -953,9 +971,13 @@ form .inner{
 	padding: 0 10px 10px 10px;
 }
 .section.section-sidebar h3{
+	background:none;
+	border:none;
+	padding: 0;
+	margin:0;
 	border-bottom: none;
 	padding-bottom: 0;
-	margin:5px;
+	margin:3px;
 	background: #00a0e9;
   background: -webkit-gradient(linear,left top,left bottom,from(#0096de),to(#0481ba));
   background: -moz-linear-gradient(top,#0096de,#0481ba);
@@ -1018,11 +1040,16 @@ form .inner{
 .explain.side-search-box-line{
 	padding-bottom: 10px;
 	border-bottom: 1px solid #222;
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 	-webkit-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.2);
 	-moz-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.2);
 }
 .section.side-search-box h3{
+	text-shadow: -1px -1px rgba(0,0,0,0.3);
+	background:none;
+	border:none;
+	padding: 0;
+	margin:0;
 	border-bottom: none;
 	padding-bottom: 0;
 }
@@ -1553,8 +1580,8 @@ form .inner{
 .footer-copy-sub{
 	font-size: 12px;
 	line-height: 1.4em;
-	margin-bottom: 20px;
-	padding-bottom: 20px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
 	border-bottom: 1px solid #222;
 	-webkit-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.1);
 	-moz-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.1);	
@@ -1619,12 +1646,21 @@ form .inner{
 /*--------------------SOCIAL BUTTON----------------------*/
 .section.section-socialbtn{
 	padding: 10px;
+	padding-bottom: 5px;
+}
+.section-socialbtn .inner{
+	margin:0;
 }
 .section-socialbtn h3{
+	background:none;
+	border:none;
 	padding: 0;
+	margin:0;
 	border-bottom: none;
 	float: left;
 	margin-right: 10px;
+	font-size: 14px;
+	line-height: 20px;
 }
 .socialbtns li{
 	float: left;

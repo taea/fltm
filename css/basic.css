@@ -427,9 +427,6 @@ h1{
 	color: #FFF;
 	text-shadow: -1px -1px rgba(0,0,0,0.5);
 }
-.global-nav li:first-child a{
-	border-left: 1px solid rgba(255,255,255,0.2);
-}
 .global-nav li a:hover{
 	background: #333;
   background: -webkit-gradient(linear,left top,left bottom,from(#777),to(#333));
@@ -515,15 +512,6 @@ h2{
 	margin-bottom: 20px;
 	border-left: 5px solid #0098dd;
 	padding-left: 8px;
-}
-h2 a{
-	color: #333;
-	background: url(/img/csl_more.png) no-repeat right center;
-	padding-right: 12px;
-}
-h2 a:hover{
-	color: #000;
-	text-decoration: none;
 }
 h3{
 	font-size: 14px;
@@ -1971,22 +1959,22 @@ form .inner{
 }
 .review_list li ul.star_rating{
 	display: block;
-	padding-left: 100px;
+	padding-left: 110px;
 	padding-top:3px;
 	padding-bottom: 3px;
 	background: url(/img/star_rating.png) no-repeat 10px 10px;
 }
-.review_list li ul.star_rating.s50{background: url(/img/star_rating.png) no-repeat 5px 10px;}
-.review_list li ul.star_rating.s45{background: url(/img/star_rating.png) no-repeat 5px -20px;}
-.review_list li ul.star_rating.s40{background: url(/img/star_rating.png) no-repeat 5px -50px;}
-.review_list li ul.star_rating.s35{background: url(/img/star_rating.png) no-repeat 5px -80px;}
-.review_list li ul.star_rating.s30{background: url(/img/star_rating.png) no-repeat 5px -110px;}
-.review_list li ul.star_rating.s25{background: url(/img/star_rating.png) no-repeat 5px -140px;}
-.review_list li ul.star_rating.s20{background: url(/img/star_rating.png) no-repeat 5px -170px;}
-.review_list li ul.star_rating.s15{background: url(/img/star_rating.png) no-repeat 5px -200px;}
-.review_list li ul.star_rating.s10{background: url(/img/star_rating.png) no-repeat 5px -230px;}
-.review_list li ul.star_rating.s05{background: url(/img/star_rating.png) no-repeat 5px -260px;}
-.review_list li ul.star_rating.s00{background: url(/img/star_rating.png) no-repeat 5px -290px;}
+.review_list li ul.star_rating.s50{background: url(/img/star_rating.png) no-repeat 10px 10px;}
+.review_list li ul.star_rating.s45{background: url(/img/star_rating.png) no-repeat 10px -20px;}
+.review_list li ul.star_rating.s40{background: url(/img/star_rating.png) no-repeat 10px -50px;}
+.review_list li ul.star_rating.s35{background: url(/img/star_rating.png) no-repeat 10px -80px;}
+.review_list li ul.star_rating.s30{background: url(/img/star_rating.png) no-repeat 10px -110px;}
+.review_list li ul.star_rating.s25{background: url(/img/star_rating.png) no-repeat 10px -140px;}
+.review_list li ul.star_rating.s20{background: url(/img/star_rating.png) no-repeat 10px -170px;}
+.review_list li ul.star_rating.s15{background: url(/img/star_rating.png) no-repeat 10px -200px;}
+.review_list li ul.star_rating.s10{background: url(/img/star_rating.png) no-repeat 10px -230px;}
+.review_list li ul.star_rating.s05{background: url(/img/star_rating.png) no-repeat 10px -260px;}
+.review_list li ul.star_rating.s00{background: url(/img/star_rating.png) no-repeat 10px -290px;}
 .review_list li ul.star_rating:after{
 	content: ".";
 	display: block;
@@ -1995,13 +1983,12 @@ form .inner{
 	visibility: hidden;
 }
 .review_list li ul li.flight_num{
-	width: 65px;
-	font-size: 12px;
+	width: 75px;
 }
 .review_list li ul li.class{
-	width:70px;
+	width:75px;
 	text-align: center;
-	font-size: 11px;
+	font-size: 12px;
 	font-weight: bold;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
@@ -2018,7 +2005,7 @@ form .inner{
 .review_list li ul li.class.business{background: #4b76bd;}
 .review_list li ul li.class.first{background: #b48b3b;}
 .review_list li ul li.review_title{
-	width:430px;
+	width:405px;
 }
 .review_list li ul li.review_title a{
 	display: block;
@@ -2229,7 +2216,7 @@ form .inner{
 .profile .summary{
 	margin-top:10px;
 	text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
-	font-size: 14px;
+	font-size: 12px;
 }
 .profile .summary li ul li{
 	font-size: 12px;
@@ -2240,9 +2227,9 @@ form .inner{
 }
 .profile .summary span.parent{
 	float: left;
-	width: 150px;
+	font-weight: bold;
+	width: 130px;
 	display: block;
-	font-weight: normal;
 }
 .profile .summary li.photos:after, .profile .summary li.reviews:after{
 	content: ".";
@@ -2271,11 +2258,11 @@ form .inner{
 	color: #0467b6;
 }
 .profile .summary li.photos{
-	background: url(/img/icns_footer.png) no-repeat left -875px;
+	background: url(/img/icns_footer.png) no-repeat left -876px;
 	padding-left: 18px;
 }
 .profile .summary li.reviews{
-	background: url(/img/icns_footer.png) no-repeat left -894px;
+	background: url(/img/icns_footer.png) no-repeat left -895px;
 	padding-left: 18px;
 }
 

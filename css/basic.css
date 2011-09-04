@@ -137,7 +137,7 @@ display: inline-block;
 	margin: 10px 0 0 0;
 }
 .inner p{
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 .inner:after{
 	content: ".";
@@ -1307,22 +1307,22 @@ form .inner{
 }
 /*--------------------PAGING----------------------*/
 .paging{
-	text-align: center;
+	margin-top: 20px;
 	margin-bottom: 20px;
 }
 .paging .count{
-	text-align: center;
-	margin-bottom: 10px;
+	float: left;
+	color: #999;
+	font-size: 12px;
+	margin-right: 20px;
+}
+.paging .count .num{
+	font-size: 160%;
 }
 .paging .numbering{
 	font-weight: bold;
 	font-family: Arial, Helvetica,sans-serif;
 	font-size: 14px;
-}
-.paging-wrapper{
-	margin-left:200px;
-	width: auto;
-	display: block;
 }
 .paging .numbering{
 	float: left;
@@ -1343,6 +1343,7 @@ form .inner{
 	-webkit-border-radius: 3px;
 	border-radius: 3px;
 	-moz-border-radius: 3px;
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.8);
 }
 .paging .next a:hover,.paging .prev a:hover{
 	background: #CCC;
@@ -1387,14 +1388,13 @@ form .inner{
 	top:-4px;
 	z-index: 2;
 }
-
 .paging .prev a:hover:after{
   border-right-color:#CCC;
 }
 .paging .next a:hover:after{
   border-left-color:#CCC;
 }
-.paging-wrapper:after{
+.paging:after{
 	content: ".";
 	display: block;
 	height: 0;
@@ -1420,6 +1420,7 @@ form .inner{
 	-webkit-box-shadow:inset 1px 1px 1px rgba(0,0,0,0.2);
 	-moz-box-shadow:inset 1px 1px 1px rgba(0,0,0,0.2);
 	*/
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.8);
 }
 .paging .numbering span a:hover{
 	background: #CCC;
@@ -1446,10 +1447,77 @@ form .inner{
   background: -moz-linear-gradient(top,#0098dd,#50bdef);
 	-webkit-box-shadow:inset 1px 1px 1px rgba(0,0,0,0.2);
 	-moz-box-shadow:inset 1px 1px 1px rgba(0,0,0,0.2);
-	text-shadow: -1px -1px 0 rgba(0,0,0,0.2);
 	*/
+	text-shadow: -1px -1px 0 rgba(0,0,0,0.2);
+}
+.paging .prev.disabled, .paging .next.disabled{
+	padding:3px;
+	padding-bottom: 4px;
+	padding-left:6px;
+	padding-right: 6px;
+	margin-left:6px;
+	margin-right: 6px;
+	background: #EEE;
+	color: #CCC;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	margin-top:-4px;
+	padding-left: 10px;
+	position: relative;
+	z-index: 1;
+}
+.paging .next.disabled{
+	padding-left: 5px;
+	padding-right: 10px;
+}
+.paging .prev.disabled:after{
+	content: "";
+	display: block;
+	height: 0px;
+	width: 0px;
+  border:13px solid #FFF;
+  border-right-color:#EEE;
+  position: absolute;
+  left:-15px;
+  top:0px;
+  z-index: 2;
+ }
+.paging .next.disabled:after{
+	content: "";
+	display: block;
+	height: 0px;
+	width: 0px;
+	border:13px solid #FFF;
+	border-left-color:#EEE;
+	position: absolute;
+	right:-15px;
+	top:0px;
+	z-index: 2;
+}
+/*--------------------SORT----------------------*/
+.sort{
+	margin-bottom: 10px;
+}
+.sort li{
+	float: left;
+	border-right: 1px solid #DDD;
+	padding-right: 10px;
+	margin-right: 10px;
+}
+.sort:after{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.sort li a{
+	background: url(/img/csl_m_lower.gif) no-repeat left center;
+	padding-left: 14px;
 }
 
+/*--------------------FOOTER----------------------*/
 .footer{
 	background: #444 url(/img/footer_bg.gif) repeat-x center top;
 	background: url(/img/footer_bg.gif) repeat-x center top, -webkit-gradient(linear,left top,left bottom, from(#444), color-stop(0.5,#444), to(#222));
@@ -2030,7 +2098,7 @@ form .inner{
 	background: url(/img/icns_footer.png) no-repeat left -895px;
 	padding-left: 18px;
 }
-/*photo sm*/
+/*--------------------*photo sm*----------------------*/
 .photo_sm{
 	margin-top: 10px;
 }
@@ -2119,6 +2187,24 @@ form .inner{
 .photo_sm li ul li.comment a:hover{
 	text-decoration: none;
 	background: url(/img/icn_comment.png) no-repeat center -30px;
+}
+/*--------------------*PHOTO*----------------------*/
+.photo li{
+	background: #EEE;
+  background: -webkit-gradient(linear,left top,left bottom,from(#EEE),to(#FFF));
+  background: -moz-linear-gradient(top,#EEE,#FFF);
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	padding: 20px;
+	margin-right:6px;
+	margin-bottom: 10px;
+	-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.1),inset 1px 1px 0 rgba(255,255,255,1);
+	-moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.1),inset 1px 1px 0 rgba(255,255,255,1);
+	border: 1px solid #DDD;
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.6);
+	padding-bottom: 8px;
+	position: relative;
 }
 /*review*/
 .review_list{

@@ -150,9 +150,23 @@
 						<!-- clearとる -->
 						<div class="inner">
 							<p><strong>うっきーさん</strong>の<strong>飛行機写真</strong>最新投稿一覧です。</p>
-							<p>並び順：<a href="/member/ukki/photo/taken/direction:desc/disp:photo">撮影日（新しい順）</a>　<a href="/member/ukki/photo/taken/direction:asc/disp:photo">撮影日（古い順）</a>　<strong>投稿日（新しい順）</strong></p>
-							<p>表示方法：<strong>写真のみ</strong>　<a href="/member/ukki/photo/post/direction:desc">写真＋詳細データ</a></p>
-							<p>全101枚中、8枚を表示しています。</p>
+							<!-- sort div>listに -->
+							<div class="sort">
+								<ul>
+									<li>並び順：</li>
+									<li><a href="/member/ukki/photo/taken/direction:desc/disp:photo">撮影日（新しい順）</a></li>
+									<li><a href="/member/ukki/photo/taken/direction:asc/disp:photo">撮影日（古い順）</a></li>
+									<li><strong>投稿日（新しい順）</strong></li>
+								</ul>
+							</div>
+							<div class="sort">
+								<ul>
+									<li>表示方法：</li>
+									<li><strong>写真のみ</strong></li>
+									<li><a href="/member/ukki/photo/post/direction:desc">写真＋詳細データ</a></li>
+								</ul>
+							</div>
+							<p>全<span class="num">101</span>枚中、<span class="num">8</span>枚を表示しています。</p>
 							<ul class="photo_sm">
 								<li>
 									<!-- ul liに <span class="sl">とる  class="num"追加-->

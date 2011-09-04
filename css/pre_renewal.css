@@ -480,17 +480,22 @@ h2{
 	visibility: hidden;
 }
 .footer-nav-menu h4{
+	margin:0;
+	padding:0;
 	height: 38px;
 	background: url(/img/icns_footer.png) no-repeat left -8px;
 	border-left: none;
 	padding-left: 36px;
 	font-size: 18px;
 	margin-bottom: 10px;
+	line-height: 22px;
 }
 .footer-nav-menu h4:hover{
 	background: url(/img/icns_footer.png) no-repeat left -48px;
 }
 .footer-nav-menu h4 a{
+	margin:0;
+	padding:0;
 	padding-top: 1px;
 	display: block;
 	height: 38px;
@@ -524,6 +529,13 @@ h2{
 	display: block;
 	font-size: 11px;
 	margin-top: -2px;
+}
+.footer-nav-menu h4:after{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
 }
 .footer-nav-menu li{
 	padding-top: 10px;

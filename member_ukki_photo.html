@@ -15,17 +15,90 @@
 		<script src="/js/pagetop.js" type="text/javascript" charset="utf-8"></script>
 		<script src="/js/smartRollover.js" type="text/javascript" charset="utf-8"></script>
 		<title>航空ファン・飛行機利用者のためのサイト FlyTeam(フライチーム)</title>
-		<script type="text/javascript">
-			$(function() {
-			$("#tree").treeview({
-			collapsed: true,
-			animated: "fast",
-			control:"#sidetreecontrol",
-			prerendered: true,
-			persist: "location"
-			});
-			})
-		</script>
+	<script type="text/javascript">
+//<![CDATA[
+
+function list_open(data){
+alert("OK");
+	var close_place = data + "_open";
+	var open_place = data + "_close";
+	var open_list = data + "_list";
+
+	if(data =="airline"){
+alert(data);
+		$("#airline_title_open").hide();
+		$("#airline_title_close").show();
+		$("#airport_list").hide();
+		$("#airport_open").show();
+		$("#airport_close").hide();
+		$("#aircraft_list").hide();
+		$("#aircraft_open").show();
+		$("#aircraft_close").hide();
+		$("#photo_spot_list").hide();
+		$("#photo_spot_open").show();
+		$("#photo_spot_close").hide();
+	}else if(data =="airport"){
+		$("#airport_title_open").hide();
+		$("#airport_title_close").show();
+		$("#airline_list").hide();
+		$("#airline_open").show();
+		$("#airline_close").hide();
+		$("#aircraft_list").hide();
+		$("#aircraft_open").show();
+		$("#aircraft_close").hide();
+		$("#photo_spot_list").hide();
+		$("#photo_spot_open").show();
+		$("#photo_spot_close").hide();
+	}else if(data =="aircraft"){
+		$("#aircraft_title_open").hide();
+		$("#aircraft_title_close").show();
+		$("#airline_list").hide();
+		$("#airline_open").show();
+		$("#airline_close").hide();
+		$("#airport_list").hide();
+		$("#airport_open").show();
+		$("#airport_close").hide();
+		$("#photo_spot_list").hide();
+		$("#photo_spot_open").show();
+		$("#photo_spot_close").hide();
+	}else if(data =="photo_spot"){
+		$("#photo_spot_title_open").hide();
+		$("#photo_spot_title_close").show();
+		$("#airline_list").hide();
+		$("#airline_open").show();
+		$("#airline_close").hide();
+		$("#airport_list").hide();
+		$("#airport_open").show();
+		$("#airport_close").hide();
+		$("#aircraft_list").hide();
+		$("#aircraft_open").show();
+		$("#aircraft_close").hide();
+	}
+	$("#"+close_place).hide();
+	$("#"+open_place).show();
+	$("#"+open_list).fadeIn();
+}
+function list_close(data){
+
+	var close_place = data + "_close";
+	var close_title_place = data + "_title_close";
+	var open_place = data + "_open";
+	var open_title_place = data + "_title_open";
+	var close_list = data + "_list";
+
+	$("#"+close_place).hide();
+	$("#"+close_title_place).hide();
+	$("#"+open_place).show();
+	$("#"+open_title_place).show();
+	$("#"+close_list).fadeOut();
+
+}
+function jiji(data){
+alert("jiji ok");
+}
+
+//]]>
+</script><script src="/js/common.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<div class="header">

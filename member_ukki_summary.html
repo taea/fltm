@@ -1,0 +1,501 @@
+<!DOCTYPE HTML>
+<html lang="JP">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta name="description" content=""/>
+		<meta name="keywords" content=""/>
+		<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="/css/basic.css?20110421" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<link rel="stylesheet" href="/js/jquery.treeview.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+		<script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/js/jquery.treeview.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/js/pagetop.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/js/smartRollover.js" type="text/javascript" charset="utf-8"></script>
+		<title>航空ファン・飛行機利用者のためのサイト FlyTeam(フライチーム)</title>
+		<script type="text/javascript">
+			$(function() {
+			$("#tree").treeview({
+			collapsed: true,
+			animated: "fast",
+			control:"#sidetreecontrol",
+			prerendered: true,
+			persist: "location"
+			});
+			})
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-cont">
+				<div class="header-upper">
+					<h1>FlyTeam(フライチーム)は、航空ファン・飛行機利用者のためのサイトです。</h1>
+					<div class="header-nav">
+						<ul>
+							<li>ようこそ<a href="/member/ken_c_lo"><strong>ken_c_lo</strong></a>さん</li>
+							<li><a href="/control_tower">管理画面</a></li>
+							<li><a href="https://flyteam.jp/control_tower/logout">ログアウト</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="header-middle">
+					<p class="logo"><a href="/"><img src="/img/logo.png"alt="航空ファン・航空機利用者のためのサイト FlyTeam(フライチーム)"/></a></p>
+					<div class="header-ads">
+						<a href="http://www.motionlink.jp/clk.php?pt=P0040172-0001&cl=C1111653-0012&uid=" target="_blank"><img src="http://www.motionlink.jp/bnr.php?pt=P0040172-0001&cl=C1111653-0012&bc=s1" border="0"/></a><br /><a href="http://www.motionlink.jp/clk.php?pt=P0040172-0001&cl=C1111653-0012&uid=" target="_blank">コンチネンタル航空とJCBのおトクな1枚！</a>
+					</div>
+				</div>
+			</div>
+			<div class="global-nav">
+				<ul>
+					<li><a href="/news">ニュース</a></li>
+					<li class="active"><a href="/airlines">航空会社</a></li>
+					<li><a href="/airline_routes">路線</a></li>
+					<li><a href="/airports">空港</a></li>
+					<li><a href="/aircrafts">機材</a></li>
+					<li><a href="/members">メンバー</a></li>
+					<li><a href="/photos">航空フォト</a></li>
+					<li><a href="/reviews">搭乗レビュー</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="parent-container">
+			<div class="container">
+				<div class="nav-topicpath">
+					<ul>
+						<li><a href="/">ホーム</a></li>
+						<li><a href="#">航空会社（エアライン）</a></li>
+						<li>日本航空 (Japan Airlines)</li>
+					</ul>
+				</div>
+				<div class="box-main">
+					<div class="section section_profile">
+						<!-- h2取りたい　確認 -->
+						<!-- <h2>うっきーさんのマイページ</h2> -->
+						<div class="inner">
+							<div class="profile">
+								<!-- div追加 -->
+								<div class="profile-upper">
+									<div class="image">
+										<!-- a 追加 -->
+										<a href="/member/ukki"><img src="http://img.flyteam.jp/img/member/0/1/1_70x70_20100701172530.jpg" alt="うっきーさん プロフィール写真" /></a>
+									</div>
+									<div class="member">
+										<dl>
+											<!-- a追加 -->
+											<dt><h2><a href="/member/ukki"><strong>うっきー</strong>さんのマイページ</a></h2></dt>
+											<dd>
+												<!-- ulに -->
+												<ul class="member-data">
+													<li>30代</li>
+													<li>男性</li>
+													<li>2010/05/27登録</li>
+													<li>アクセス数：15075</li>
+													<!-- HPをimgに  / アイコン画像パス変更-->
+													<li><a href="http://4travel.jp/traveler/world" target="_blank" class="external"><img src="/img/icn_HP.png" alt="うっきーさんのHP" /></a></li>
+													<li><a href="http://twitter.com/ukegawa" target="_blank"><img src="/img/icn_twitter.png" alt="うっきーさんのツイッター" /></li>
+													<li></a><a href="http://mixi.jp/show_profile.pl?id=67117" target="_blank"><img src="/img/icn_mixi.png" alt="うっきーさんのMixi" /></a></li>
+													<li><a href="http://www.facebook.com/profile.php?id=100000515304404" target="_blank"><img src="/img/icn_facebook.png" alt="うっきーさんのfacebook" /></a></li>
+												</ul>
+											</dd>
+										</dl>
+									</div>
+								</div>
+								<div class="comments">
+									<p>最近、EOS KissNからKissX4にカメラを新調しました。まだまだ、シャッタースピード・絞りなどと悪戦苦闘しながら、カメラ勉強中です。<br />以前、飛行機に乗ることが仕事の一部だったので、昔を懐かしみながら、撮影しています！<br />FlyTeamの管理者でもあります。よろしくお願いします。</p>
+									<!-- <span></span> -->
+								</div>
+								<!-- <br clear="all" /> -->
+								<div class="summary">
+									<ul>
+										<!-- span class="num"追加 -->
+										<!-- <li class="mgntop5"> -->
+										<li class="photos"><span class="parent"><a href="/member/ukki/photo">航空フォト：<span class="num">101</span>枚</a></span>
+											<!-- ulに -->
+											<ul>
+												<li class="airlines"><a href="/member/ukki/summary#airline_photo">航空会社：<span class="num">44</span>社</a></li>
+												<li class="airports"><a href="/member/ukki/summary#airport_photo">空港：<span class="num">11</span>空港</a></li>
+												<li class="aircrafts"><a href="/member/ukki/summary#aircraft_photo">機材：<span class="num">28</span>機種</a></li>
+												<li class="numbers"><a href="/member/ukki/summary#registration_photo">機体番号：<span class="num">90</span>件</a></li>
+											</ul>
+										</li>
+										<li class="reviews">
+											<span class="parent"><a href="/member/ukki/review">搭乗レビュー：<span class="num">5</span>件</a></span>
+												<ul>
+													<li class="airlines"><a href="/member/ukki/summary#airline_review">航空会社：<span class="num">2</span>社</a></li>
+												</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- tab-navに　div2つばかり取る -->
+					<div class="tab-nav">
+						<ul>
+							<li><a href="/member/ukki">トップ</a></li>
+							<li><a href="/member/ukki/photo" class="active">航空フォト</a></li>
+							<li><a href="/member/ukki/photo_spot">撮影スポット</a></li>
+							<li><a href="/member/ukki/album">アルバム</a></li>
+							<li><a href="/member/ukki/review">搭乗レビュー</a></li>
+							<li><a href="/member/ukki/summary">サマリー</a></li>
+							<li><a href="https://fltm.info/member/ukki/send_message">DM</a></li>
+						</ul>
+					</div>
+					<!-- tab-after追加 -->
+					<!-- ▼▼▼▼▼▼CONTENTS▼▼▼▼▼▼▼ -->
+<div class="section presents clear"><h2>うっきーさんの投稿サマリー</h2><div class="inner clear"><p>うっきーさんの<a href="/member/ukki/photo">航空フォト 102枚</a>の投稿サマリーならびに<a href="/member/ukki/review">搭乗レビュー 5件</a>の投稿サマリーです。</p><p><a href="#airline_photo">航空フォト 航空会社数（44）</a> | <a href="#airport_photo">航空フォト　空港数（11）</a> | <a href="#aircraft_photo">航空フォト　機材数（28）</a> | <a href="#airline_review">搭乗レビュー 航空会社数（2）</a></p><p	>航空会社別、空港別、機材別の投稿数を確認することができます。</p></p></div></div><div class="section presents clear"><h2 id="Photo">うっきーさんの航空フォトの投稿サマリー</h2><div class="inner clear"><p>うっきーさんの航空フォト 投稿サマリーです。航空会社別、空港別、機材別、機体番号別に投稿数を確認することができます。</p><div class="clear"><div class="list_3_1 clear"><h3 id ="airline_photo">航空フォト 航空会社別</h3><div class="inner"><ul><li><a href="/member/ukki/photo/airline:hokkaido-international-airlines">AIR DO (1)</a></li><li><a href="/member/ukki/photo/airline:jal-express">JALエクスプレス (1)</a></li><li><a href="/member/ukki/photo/airline:klm">KLMオランダ航空 (1)</a></li><li><a href="/member/ukki/photo/airline:asiana-airlines">アシアナ航空 (1)</a></li><li><a href="/member/ukki/photo/airline:american">アメリカン航空 (1)</a></li><li><a href="/member/ukki/photo/airline:alaska-airlines">アラスカ航空 (2)</a></li><li><a href="/member/ukki/photo/airline:air-canada">エア・カナダ (1)</a></li><li><a href="/member/ukki/photo/airline:air-tahiti-nui">エア・タヒチ・ヌイ (1)</a></li><li><a href="/member/ukki/photo/airline:air-berlin">エア・ベルリン (1)</a></li><li><a href="/member/ukki/photo/airline:air-japan">エアージャパン (1)</a></li><li><a href="/member/ukki/photo/airline:air-nippon">エアーニッポン (1)</a></li><li><a href="/member/ukki/photo/airline:air-next">エアーネクスト (1)</a></li><li><a href="/member/ukki/photo/airline:airfrance">エールフランス (2)</a></li><li><a href="/member/ukki/photo/airline:air-austral">エール・オーストラル (1)</a></li><li><a href="/member/ukki/photo/airline:omni-air-international">オムニエアインターナショナル (1)</a></li><li><a href="/member/ukki/photo/airline:cargolux">カーゴルクス (2)</a></li><li><a href="/member/ukki/photo/airline:continental">コンチネンタル航空 (1)</a></li><li><a href="/member/ukki/photo/airline:jetblue-airways">ジェットブルー航空 (1)</a></li><li><a href="/member/ukki/photo/airline:skynet-asia-airways">スカイネットアジア航空 (2)</a></li><li><a href="/member/ukki/photo/airline:skymark">スカイマーク (2)</a></li><li><a href="/member/ukki/photo/airline:starflyer">スターフライヤー (3)</a></li><li><a href="/member/ukki/photo/airline:thai-airways-international">タイ国際航空 (1)</a></li><li><a href="/member/ukki/photo/airline:china-airlines">チャイナエアライン (1)</a></li><li><a href="/member/ukki/photo/airline:delta">デルタ航空 (5)</a></li><li><a href="/member/ukki/photo/airline:fedex-express">フェデックス エクスプレス (2)</a></li><li><a href="/member/ukki/photo/airline:flydubai">フライドバイ (1)</a></li><li><a href="/member/ukki/photo/airline:frontier-airlines">フロンティア航空 (2)</a></li><li><a href="/member/ukki/photo/airline:horizon-air">ホライゾン航空 (2)</a></li><li><a href="/member/ukki/photo/airline:boeing">ボーイング (1)</a></li><li><a href="/member/ukki/photo/airline:mokulele-airlines">モクレレ航空 (1)</a></li><li><a href="/member/ukki/photo/airline:united">ユナイテッド航空 (4)</a></li><li><a href="/member/ukki/photo/airline:royal-air-maroc">ロイヤル・エア･モロッコ (1)</a></li><li><a href="/member/ukki/photo/airline:virgin-atlantic">ヴァージン・アトランティック航空 (1)</a></li><li><a href="/member/ukki/photo/airline:air-china">中国国際航空 (2)</a></li><li><a href="/member/ukki/photo/airline:china-eastern-airlines">中国東方航空 (1)</a></li><li><a href="/member/ukki/photo/airline:ana">全日空 (17)</a></li><li><a href="/member/ukki/photo/airline:koreanair">大韓航空 (3)</a></li><li><a href="/member/ukki/photo/airline:okay-airways">奥凱航空 (1)</a></li><li><a href="/member/ukki/photo/airline:new-central-air-service">新中央航空 (2)</a></li><li><a href="/member/ukki/photo/airline:japan-air-commuter">日本エアコミューター (1)</a></li><li><a href="/member/ukki/photo/airline:japan-transocean-air">日本トランスオーシャン航空 (1)</a></li><li><a href="/member/ukki/photo/airline:jal">日本航空 (22)</a></li><li><a href="/member/ukki/photo/airline:japan-coast-guard">海上保安庁 (1)</a></li><li><a href="/member/ukki/photo/airline:japan-air-self-defense-force">航空自衛隊 (1)</a></li></ul></div></div><div class="list_3_2 clear"><h3 id ="airport_photo">航空フォト 空港別</h3><div class="inner"><ul><li><a href="/member/ukki/photo/airport:seattle–tacoma-international-airport">シアトル タコマ国際空港 (9)</a></li><li><a href="/member/ukki/photo/airport:paine-field">ペインフィールド空港 (14)</a></li><li><a href="/member/ukki/photo/airport:honolulu-international-airport">ホノルル国際空港 (12)</a></li><li><a href="/member/ukki/photo/airport:boeing-field">ボーイングフィールド (1)</a></li><li><a href="/member/ukki/photo/airport:renton-municipal-airport">レントン市営空港 (2)</a></li><li><a href="/member/ukki/photo/airport:iruma-airbase">入間飛行場 (1)</a></li><li><a href="/member/ukki/photo/airport:narita-international-airport">成田国際空港 (19)</a></li><li><a href="/member/ukki/photo/airport:matsuyama-airport">松山空港 (1)</a></li><li><a href="/member/ukki/photo/airport:tokyo-international-airport">羽田空港 (32)</a></li><li><a href="/member/ukki/photo/airport:chofu-airport">調布飛行場 (2)</a></li><li><a href="/member/ukki/photo/airport:takamatsu-airport">高松空港 (9)</a></li></ul></div></div><div class="list_3_3 clear"><h3 id ="aircraft_photo">航空フォト 機材別</h3><div class="inner"><ul><li><a href="/member/ukki/photo/aircraft:a300-600">Airbus A300-600 (3)</a></li><li><a href="/member/ukki/photo/aircraft:a319">Airbus A319 (2)</a></li><li><a href="/member/ukki/photo/aircraft:a320-200">Airbus A320-200 (3)</a></li><li><a href="/member/ukki/photo/aircraft:a321-200">Airbus A321-200 (1)</a></li><li><a href="/member/ukki/photo/aircraft:a330-300">Airbus A330-300 (2)</a></li><li><a href="/member/ukki/photo/aircraft:a340-300">Airbus A340-300 (1)</a></li><li><a href="/member/ukki/photo/aircraft:a340-600">Airbus A340-600 (1)</a></li><li><a href="/member/ukki/photo/aircraft:737-400">Boeing 737-400 (3)</a></li><li><a href="/member/ukki/photo/aircraft:737-500">Boeing 737-500 (2)</a></li><li><a href="/member/ukki/photo/aircraft:737-700">Boeing 737-700 (2)</a></li><li><a href="/member/ukki/photo/aircraft:737-800">Boeing 737-800 (9)</a></li><li><a href="/member/ukki/photo/aircraft:737-900">Boeing 737-900 (1)</a></li><li><a href="/member/ukki/photo/aircraft:747-400">Boeing 747-400 (10)</a></li><li><a href="/member/ukki/photo/aircraft:747-8">Boeing 747-8 (2)</a></li><li><a href="/member/ukki/photo/aircraft:757-200">Boeing 757-200 (2)</a></li><li><a href="/member/ukki/photo/aircraft:767-300">Boeing 767-300 (4)</a></li><li><a href="/member/ukki/photo/aircraft:777-200">Boeing 777-200 (6)</a></li><li><a href="/member/ukki/photo/aircraft:777-300">Boeing 777-300 (4)</a></li><li><a href="/member/ukki/photo/aircraft:787-8">Boeing 787-8 Dreamliner (4)</a></li><li><a href="/member/ukki/photo/aircraft:crj-700">Bombardier CRJ-700 (1)</a></li><li><a href="/member/ukki/photo/aircraft:dhc-8-200">Bombardier DHC-8-200 (1)</a></li><li><a href="/member/ukki/photo/aircraft:208-caravan">Cessna 208 Caravan (1)</a></li><li><a href="/member/ukki/photo/aircraft:228">Fairchild Dornier 228 (2)</a></li><li><a href="/member/ukki/photo/aircraft:md-11">McDonnell Douglas MD-11 (1)</a></li><li><a href="/member/ukki/photo/aircraft:md-80_dc-9-80">McDonnell Douglas MD-80 (DC-9-80) (1)</a></li><li><a href="/member/ukki/photo/aircraft:md-90">McDonnell Douglas MD-90 (2)</a></li><li><a href="/member/ukki/photo/aircraft:ys-11">NAMC YS-11 (2)</a></li><li><a href="/member/ukki/photo/aircraft:saab340">Saab 340 (2)</a></li></ul></div></div></div><h3 id ="registration_photo" class="mgntop20">航空フォト 機体番号（登録記号、レジ）別</h3><div class="inner"><ul class="list7"><li><a href="/member/ukki/photo/registration:12-1160">12-1160 (1)</a></li><li><a href="/member/ukki/photo/registration:A6-FDM">A6-FDM (1)</a></li><li><a href="/member/ukki/photo/registration:B-18202">B-18202 (1)</a></li><li><a href="/member/ukki/photo/registration:B-5390">B-5390 (1)</a></li><li><a href="/member/ukki/photo/registration:B-5573">B-5573 (1)</a></li><li><a href="/member/ukki/photo/registration:B-6126">B-6126 (1)</a></li><li><a href="/member/ukki/photo/registration:B-6383">B-6383 (1)</a></li><li><a href="/member/ukki/photo/registration:C-FIVS">C-FIVS (1)</a></li><li><a href="/member/ukki/photo/registration:D-ABLF">D-ABLF (1)</a></li><li><a href="/member/ukki/photo/registration:F-GZNH">F-GZNH (2)</a></li><li><a href="/member/ukki/photo/registration:F-OJTN">F-OJTN (1)</a></li><li><a href="/member/ukki/photo/registration:G-VWIN">G-VWIN (1)</a></li><li><a href="/member/ukki/photo/registration:HL7461">HL7461 (1)</a></li></ul><ul class="list7">
+
+<li><a href="/member/ukki/photo/registration:HL7488">HL7488 (1)</a></li><li><a href="/member/ukki/photo/registration:HL7607">HL7607 (1)</a></li><li><a href="/member/ukki/photo/registration:HL7792">HL7792 (1)</a></li><li><a href="/member/ukki/photo/registration:HS-TGO">HS-TGO (1)</a></li><li><a href="/member/ukki/photo/registration:JA005D">JA005D (1)</a></li><li><a href="/member/ukki/photo/registration:JA009D">JA009D (1)</a></li><li><a href="/member/ukki/photo/registration:JA012D">JA012D (1)</a></li><li><a href="/member/ukki/photo/registration:JA015D">JA015D (1)</a></li><li><a href="/member/ukki/photo/registration:JA03MC">JA03MC (2)</a></li><li><a href="/member/ukki/photo/registration:JA04MC">JA04MC (1)</a></li><li><a href="/member/ukki/photo/registration:JA316J">JA316J (1)</a></li><li><a href="/member/ukki/photo/registration:JA31CA">JA31CA (1)</a></li><li><a href="/member/ukki/photo/registration:JA32CA">JA32CA (1)</a></li></ul><ul class="list7">
+<li><a href="/member/ukki/photo/registration:JA355K">JA355K (1)</a></li><li><a href="/member/ukki/photo/registration:JA602A">JA602A (1)</a></li><li><a href="/member/ukki/photo/registration:JA614A">JA614A (1)</a></li><li><a href="/member/ukki/photo/registration:JA617A">JA617A (1)</a></li><li><a href="/member/ukki/photo/registration:JA619J">JA619J (1)</a></li><li><a href="/member/ukki/photo/registration:JA621J">JA621J (1)</a></li><li><a href="/member/ukki/photo/registration:JA631J">JA631J (1)</a></li><li><a href="/member/ukki/photo/registration:JA712A">JA712A (2)</a></li><li><a href="/member/ukki/photo/registration:JA737E">JA737E (1)</a></li><li><a href="/member/ukki/photo/registration:JA737G">JA737G (1)</a></li><li><a href="/member/ukki/photo/registration:JA737X">JA737X (1)</a></li><li><a href="/member/ukki/photo/registration:JA737Y">JA737Y (1)</a></li><li><a href="/member/ukki/photo/registration:JA752J">JA752J (1)</a></li></ul><ul class="list7">
+
+<li><a href="/member/ukki/photo/registration:JA755A">JA755A (1)</a></li><li><a href="/member/ukki/photo/registration:JA771J">JA771J (2)</a></li><li><a href="/member/ukki/photo/registration:JA804A">JA804A (1)</a></li><li><a href="/member/ukki/photo/registration:JA806A">JA806A (1)</a></li><li><a href="/member/ukki/photo/registration:JA8070">JA8070 (1)</a></li><li><a href="/member/ukki/photo/registration:JA8074">JA8074 (1)</a></li><li><a href="/member/ukki/photo/registration:JA8088">JA8088 (1)</a></li><li><a href="/member/ukki/photo/registration:JA8089">JA8089 (3)</a></li><li><a href="/member/ukki/photo/registration:JA821J">JA821J (1)</a></li><li><a href="/member/ukki/photo/registration:JA8256">JA8256 (1)</a></li><li><a href="/member/ukki/photo/registration:JA8285">JA8285 (1)</a></li><li><a href="/member/ukki/photo/registration:JA8287">JA8287 (1)</a></li><li><a href="/member/ukki/photo/registration:JA8504">JA8504 (1)</a></li></ul><ul class="list7">
+<li><a href="/member/ukki/photo/registration:JA8565">JA8565 (1)</a></li><li><a href="/member/ukki/photo/registration:JA8594">JA8594 (1)</a></li><li><a href="/member/ukki/photo/registration:JA8669">JA8669 (1)</a></li><li><a href="/member/ukki/photo/registration:JA8743">JA8743 (1)</a></li><li><a href="/member/ukki/photo/registration:JA8907">JA8907 (1)</a></li><li><a href="/member/ukki/photo/registration:JA8922">JA8922 (1)</a></li><li><a href="/member/ukki/photo/registration:JA8931">JA8931 (1)</a></li><li><a href="/member/ukki/photo/registration:JA8956">JA8956 (1)</a></li><li><a href="/member/ukki/photo/registration:JA8957">JA8957 (1)</a></li><li><a href="/member/ukki/photo/registration:JA8958">JA8958 (1)</a></li><li><a href="/member/ukki/photo/registration:JA8959">JA8959 (1)</a></li><li><a href="/member/ukki/photo/registration:JA8961">JA8961 (1)</a></li><li><a href="/member/ukki/photo/registration:JA8984">JA8984 (1)</a></li></ul><ul class="list7">
+
+<li><a href="/member/ukki/photo/registration:JA953A">JA953A (1)</a></li><li><a href="/member/ukki/photo/registration:N171UA">N171UA (1)</a></li><li><a href="/member/ukki/photo/registration:N249BA">N249BA (1)</a></li><li><a href="/member/ukki/photo/registration:N306AS">N306AS (1)</a></li><li><a href="/member/ukki/photo/registration:N354NW">N354NW (1)</a></li><li><a href="/member/ukki/photo/registration:N435QX">N435QX (1)</a></li><li><a href="/member/ukki/photo/registration:N5573S">N5573S (2)</a></li><li><a href="/member/ukki/photo/registration:N558AX">N558AX (1)</a></li><li><a href="/member/ukki/photo/registration:N583UA">N583UA (1)</a></li><li><a href="/member/ukki/photo/registration:N593FE">N593FE (1)</a></li><li><a href="/member/ukki/photo/registration:N609QX">N609QX (1)</a></li><li><a href="/member/ukki/photo/registration:N624AS">N624AS (1)</a></li><li><a href="/member/ukki/photo/registration:N653JB">N653JB (1)</a></li></ul><ul class="list7">
+<li><a href="/member/ukki/photo/registration:N670US">N670US (1)</a></li><li><a href="/member/ukki/photo/registration:N674US">N674US (1)</a></li><li><a href="/member/ukki/photo/registration:N76529">N76529 (1)</a></li><li><a href="/member/ukki/photo/registration:N77014">N77014 (1)</a></li><li><a href="/member/ukki/photo/registration:N793UA">N793UA (1)</a></li><li><a href="/member/ukki/photo/registration:N806NW">N806NW (1)</a></li><li><a href="/member/ukki/photo/registration:N810NW">N810NW (1)</a></li><li><a href="/member/ukki/photo/registration:N853FD">N853FD (1)</a></li><li><a href="/member/ukki/photo/registration:N864MA">N864MA (1)</a></li><li><a href="/member/ukki/photo/registration:N931TW">N931TW (1)</a></li><li><a href="/member/ukki/photo/registration:N934FR">N934FR (2)</a></li><li><a href="/member/ukki/photo/registration:JA852J">JA852J (1)</a></li><li><a href="/member/ukki/photo/registration:PH-BFP">PH-BFP (1)</a></li></ul><ul class="list7">
+
+</ul></div></div></div>
+					<!-- ▲▲▲▲▲▲CONTENTS▲▲▲▲▲▲ -->
+					<!-- presents clear toru -->
+					<div class="section">
+						<h2><a href="/member/ukki/summary">うっきーさんの投稿サマリー</a></h2>
+						<div class="inner">
+							<p>うっきーさんの航空フォト 投稿サマリーならびに搭乗レビュー 投稿サマリーの上位3件を紹介しています。</p>
+							<p class="continues"><a href="/member/ukki/summary">うっきーさんの投稿サマリーページ</a></p>
+							<!-- list-box追加 -->
+							<div class="list-boxes">
+								<div class="list_box list_3_1">
+									<!-- h3にaタグ追加 -->
+									<h3 id ="airline_photo"><a href="/member/ukki/summary#airline_photo">航空フォト 航空会社別</a></h3>
+									<div class="inner">
+										<ul class="list_link">
+											<li><a href="/member/ukki/photo/airline:jal">日本航空 (<span class="num">22</span>)</a></li>
+											<li><a href="/member/ukki/photo/airline:ana">全日空 (<span class="num">16</span>)</a></li>
+											<li><a href="/member/ukki/photo/airline:delta">デルタ航空 (<span class="num">5</span>)</a></li>
+										</ul>
+									<p class="continues"><a href="/member/ukki/summary#airline_photo">もっと見る</a></p>
+									</div>
+								</div>
+								<div class="list_box list_3_2">
+									<h3 id ="airport_photo">航空フォト 空港別</h3>
+									<div class="inner">
+										<ul class="list_link">
+											<li><a href="/member/ukki/photo/airport:tokyo-international-airport">羽田空港 (32)</a></li>
+											<li><a href="/member/ukki/photo/airport:narita-international-airport">成田国際空港 (19)</a></li>
+											<li><a href="/member/ukki/photo/airport:paine-field">ペインフィールド空港 (14)</a></li>
+										</ul>
+										<p class="continues"><a href="/member/ukki/summary#airport_photo">もっと見る</a></p>
+									</div>
+								</div>
+								<div class="list_box list_3_3 clear">
+									<h3 id ="aircraft_photo">航空フォト 機材別</h3>
+									<div class="inner">
+										<ul class="list_link">
+											<li><a href="/member/ukki/photo/aircraft:747-400">Boeing 747-400 (10)</a></li>
+											<li><a href="/member/ukki/photo/aircraft:737-800">Boeing 737-800 (9)</a></li>
+											<li><a href="/member/ukki/photo/aircraft:777-200">Boeing 777-200 (6)</a></li>
+										</ul>
+										<p class="continues"><a href="/member/ukki/summary#aircraft_photo">もっと見る >></a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="inner">
+							<div class="list-boxes">
+								<div class="list_box list_3_1">
+									<h3 id ="airline_photo">搭乗レビュー 航空会社別</h3>
+									<div class="inner">
+										<ul class="list_link">
+											<li><a href="/member/ukki/review">デルタ航空 (3)</a></li>
+											<li><a href="/member/ukki/review">日本航空 (2)</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="inner clear">
+							<ul class="list_yoko">
+								<li><a href="/member/ukki/summary#Photo">航空フォトサマリー</a></li>
+								<li><a href="/member/ukki/summary#registration_photo">航空フォト 機体番号（登録記号、レジ）サマリー</a></li>
+								<li class="last"><a href="/member/ukki/summary#Review">搭乗レビューサマリー</a></li>
+							</ul>
+						</div>
+					</div>
+				<!-- ソーシャルボタン -->
+				<div class="section section-socialbtn">
+					<h3>このページを共有する</h3>
+					<div class="inner">
+						<ul class="socialbtns">
+							<!-- Twitter -->
+							<li class="socialbtn-twitter"><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="FlyTeamJp" data-related="FlyTeamNews:航空会社、マイレージ情報などのニュースをほぼ毎日お届け！" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
+							<!-- Facebook -->
+							<li class="socialbtn-facebook"><script src="http://connect.facebook.net/ja_JP/all.js#xfbml=1"></script><fb:like href="http://flyteam.jp/photo/EZY/Airbus-A319-111/84154" layout="button_count" show_faces="false" width="90"></fb:like></li>
+							<!-- Hatena ！！要URLを動的に！！ -->
+							<li class="socialbtn-hatena">
+								<a href="http://b.hatena.ne.jp/entry/http://flyteam.jp/" class="hatena-bookmark-button" data-hatena-bookmark-title="FlyTeam" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+							</li>
+							<!-- Mixi -->
+							<li class="socialbtn-mixi"><a href="http://mixi.jp/share.pl" class="mixi-check-button" data-key="d9814ccda8691473dedd21c34c862bd9d423dcbb">mixiチェック</a><script type="text/javascript" src="http://static.mixi.jp/js/share.js"></script></li>
+							<!-- Google+-->
+							<li class="socialbtn-google">
+							<!-- Place this tag where you want the +1 button to render -->
+								<g:plusone size="small"></g:plusone>
+							
+								<!-- Place this render call where appropriate -->
+								<script type="text/javascript">
+							  	window.___gcfg = {lang: 'ja'};
+	
+							  		(function() {
+							   	 var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+							   	 po.src = 'https://apis.google.com/js/plusone.js';
+							   	 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+							  	})();
+								</script>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				</div>
+				<div class="box-right">
+					<div class="section side-member-box">
+						<p class="side-member-title"><a href="/control_tower"><img src="/img/member_title.gif" alt="FlyTeam 管理画面" /></a></p>
+						<div class="inner">
+							<p class="image"><a href="/member/ken_c_lo"><img src="http://img.flyteam.jp/img/member/0/1/1_70x70_20100701172530.jpg" alt="" /></a></p>
+							<div class="side-member-box-text">
+								<p class="pre-name num">WELCOME!</p>
+								<p class="name"><a href="/member/ken_c_lo"><strong>うっきー</strong><span class="num">さん</span></a></p>
+								<div class="action">
+									<ul>
+										<li class="side-member-box-ct"><a href="/control_tower">管理画面</a></li>
+										<li class="side-member-box-logout"><a href="https://flyteam.jp/control_tower/logout">ログアウト</a></li>
+										<li class="side-member-box-photo"><a href="/control_tower/photo_add">フォトを投稿</a></li>
+										<li class="side-member-box-review"><a href="/control_tower/flight_add">レビューを投稿</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section side-member-box init">
+						<p class="side-member-title"><a href="https://flyteam.jp/control_tower/login"><img src="/img/member_title.gif" alt="FlyTeam ログイン" /></a></p>
+						<div class="inner">
+							<div class="side-member-box-text">
+								<p class="pre-name num">WELCOME!</p>
+								<p class="name"><strong>ゲスト</strong><span class="num">さん</span></p>
+								<div class="action">
+									<ul>
+										<li class="side-member-box-logout"><a href="/control_tower">ログイン</a></li>
+										<li class="side-member-box-beginner"><a href="https://flyteam.jp/control_tower/logout">新規会員登録</a></li>
+									</ul>
+								</div>
+								<div class="side-member-box-about">
+									<p class="side-member-box-about-copy">FlyTeamメンバー登録をすると…</p>
+									<ol class="simple-list">
+										<li><strong>航空フォト</strong>の投稿・公開・管理ができる！</li>
+										<li><strong>搭乗レビュー</strong>の投稿・公開ができる！</li>
+										<li><strong>コミュニケーション</strong>・情報交換ができる！</li>
+									</ol>
+									<p class="continues"><a href="https://flyteam.jp/control_tower/login#explain">さらに詳しくはこちら</a></p>
+									<p class="btn-common blue"><a href="https://flyteam.jp/reg">今すぐメンバー登録（無料）</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section">
+						<script type="text/javascript">
+							<!--
+							google_ad_client = "pub-3578152824462829";
+							/* 250x250, FlyTeam 10/06/28 */
+							google_ad_slot = "9626468877";
+							google_ad_width = 250;
+							google_ad_height = 250;
+							//-->
+						</script>
+						<script type="text/javascript"
+							src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+						</script>
+					</div>
+					<div class="section side-search-box">
+						<h3>サイト内検索</h3>
+						<div class="inner">
+							<form action="http://flyteam.jp/search/g" id="cse-search-box">
+								<div class="inner">
+									<div class="form-wrapper">
+										<input type="hidden" name="cx" value="partner-pub-3578152824462829:1919824454" />
+										<input type="hidden" name="cof" value="FORID:9" />
+										<input type="hidden" name="ie" value="UTF-8" />
+										<input type="hidden" name="ref" value="airlines" />
+										<input type="text" name="q" size="12" class="form-textarea" />
+										<input type="submit" name="sa" value="検索" class="form-submit" />
+									</div>
+									<p class="explain side-search-box-line">サイト内のキーワード検索です。</p>
+								</div>
+							</form>
+							<script type="text/javascript" src="http://www.google.co.jp/coop/cse/brand?form=cse-search-box&lang=ja"></script>
+							<h3>２,３レターコード、レジ検索</h3>
+							<div class="inner">
+								<p class="explain">航空会社、空港、機体番号（レジ）の検索です。</p>
+								<div class="form-wrapper">
+									<form method="get" action="/search"><input name="q" type="text" size="12" value="" id="RegNumberQ" class="form-textarea" placeholder="例：HNL、RJTT、JAL、JL、JA8089 etc" /><input type="hidden" name="ref" size="12" value="airlines" id="RegNumberRef" /><input type="submit" label="" value="検索" class="form-submit"/>
+								</form>
+							</div>
+							<p class="explain">例：HNL、RJTT、JAL、JL、JA8089 etc</p>
+						</div>
+					</div>
+				</div>
+				<div class="ranking_box section section-sidebar">
+					<h3><a href="/news/access">人気ニュースランキング</a></h3>
+					<div class="inner">
+						<ul class="list-stripe news_list">
+							<li><span class="lank"><span class="num">1</span>位</span><a href="/news/article/3710">シンガポール航空CEOが平謝りも火に油-ウェブ・リニューアルが原因</a></li>
+							<li><span class="lank"><span class="num">2</span>位</span><a href="/news/article/3690">「エアアジアとANAが提携へ」と報じられる-日本国内線に参入か？</a></li>
+							<li><span class="lank"><span class="num">3</span>位</span><a href="/news/article/3699">B787の来日した「N787EX」、デリーからボーイングフィールドへ</a></li>
+							<li><span class="lank"><span class="num">4</span>位</span><a href="/news/article/3704">スカイマーク、9月後半にも5800円運賃を設定-就航17路線で</a></li>
+							<li><span class="lank"><span class="num">5</span>位</span><a href="/news/article/3711">乗客乗せずにフライトする路線を整理へ-デルタのアメリカ24空港</a></li>
+						</ul>
+						<p class="continues"><a href="/news/access">もっと見る</a></p>
+					</div>
+				</div>
+				<div class="section section-sidebar">
+					<h3>FlyTeamのサービス</h3>
+					<div class="inner">
+						<p>FlyTeam(フライチーム)のサービス一覧です。</p>
+						<ul class="list_link mgntop10">
+							<li><a href="/news">ニュース</a></li>
+							<li><a href="/photos">航空フォト</a></li>
+							<li><a href="/reviews">搭乗レビュー</a></li>
+							<li><a href="/members">メンバー</a></li>
+							<li><a href="/airlines">航空会社（エアライン）</a></li>
+							<li><a href="/airports">空港（エアポート）</a></li>
+							<li><a href="/aircraft">航空機材（エアクラフト）</a></li>
+							<li><a href="/area">エリア別</a></li>
+							<li><a href="/alliance">アライアンス別</a></li>
+							<li><a href="/ffps">マイレージプログラム</a></li>
+							<li><a href="/airline_routes">航空路線</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="section">
+					<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab" id="Player_aebd1fda-8692-4e11-b60f-aa31ac33c1dc"WIDTH="250px" HEIGHT="250px"><PARAM NAME="movie" VALUE="http://ws.amazon.co.jp/widgets/q?ServiceVersion=20070822&MarketPlace=JP&ID=V20070822%2FJP%2Fft079-22%2F8009%2Faebd1fda-8692-4e11-b60f-aa31ac33c1dc&Operation=GetDisplayTemplate"><PARAM NAME="quality" VALUE="high"><PARAM NAME="bgcolor" VALUE="#FFFFFF"><PARAM NAME="allowscriptaccess" VALUE="always"><embed src="http://ws.amazon.co.jp/widgets/q?ServiceVersion=20070822&MarketPlace=JP&ID=V20070822%2FJP%2Fft079-22%2F8009%2Faebd1fda-8692-4e11-b60f-aa31ac33c1dc&Operation=GetDisplayTemplate" id="Player_aebd1fda-8692-4e11-b60f-aa31ac33c1dc" quality="high" bgcolor="#ffffff" name="Player_aebd1fda-8692-4e11-b60f-aa31ac33c1dc" allowscriptaccess="always"type="application/x-shockwave-flash" align="middle" height="250px" width="250px"></embed></object>
+					<noscript><a HREF="http://ws.amazon.co.jp/widgets/q?ServiceVersion=20070822&MarketPlace=JP&ID=V20070822%2FJP%2Fft079-22%2F8009%2Faebd1fda-8692-4e11-b60f-aa31ac33c1dc&Operation=NoScript">Amazon.co.jp ウィジェット</A></noscript>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="footer-wrapper">
+			<p class="pagetop"><a href="#" onclick="backToTop(); return false">PageTop</a></p>
+			<div class="footer-nav">
+				<div class="footer-box-left">
+					<ul class="footer-nav-menu">
+						<li>
+							<h4 class="airlines"><a href="/airlines">世界の航空会社<span class="num">Airlines</span></h4></a>
+							<ul class="footer-nav-menu-sub">
+								<li><a href="#">JAL</a></li>
+								<li><a href="#">ANA</a></li>
+								<li><a href="#">KLM</a></li>
+								<li><a href="#">KLM</a></li>
+								<li><a href="#">JAL</a></li>
+								<li><a href="#">ANA</a></li>
+								<li><a href="#">KLM</a></li>
+								<li><a href="#">KLM</a></li>
+								<li><a href="#">KLM</a></li>
+								<li><a href="#">JAL</a></li>
+								<li><a href="#">ANA</a></li>
+								<li><a href="#">KLM</a></li>
+								<li><a href="#">KLM</a></li>
+								<li><a href="#">JAL</a></li>
+								<li><a href="#">ANA</a></li>
+								<li><a href="#">KLM</a></li>
+								<li><a href="#">KLM</a></li>
+								<li><a href="#">JAL</a></li>
+								<li><a href="#">JAL</a></li>
+								<li><a href="#">ANA</a></li>
+								<li><a href="#">KLM</a></li>
+								<li><a href="#">KLM</a></li>
+								<li><a href="#">JAL</a></li>
+							</ul>
+						</li>
+						<li><h4 class="airport"><a href="/airports">世界の空港<span class="num">Airport</span></a></h4></li>
+						<li><h4 class="route"><a href="/routes">世界の路線<span class="num">Route</span></a></h4></li>
+						<li>
+							<h4 class="aircraft"><a href="/aircrafts">機材<span class="num">Aircraft</span></a></h4>
+							<ul class="footer-nav-menu-sub">
+								<li><a href="/aircraft/airbus">エアバス</a></li>
+								<li><a href="/aircraft/boeing">ボーイング</a></li>
+								<li><a href="/aircraft/mcdonnell-douglas">マクドネル・ダグラス</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-box-center">
+					<ul class="footer-nav-menu">
+						<li><h4 class="news"><a href="/news">航空ニュース<span class="num">News</span></a></h4></li>
+						<li>
+							<h4 class="photo"><a href="/photos">航空フォト<span class="num">Photos</span></a></h4>
+							<ul class="footer-nav-menu-sub">
+								<li><a href="/photos/ranking/24hour">アクセスランキング</a></li>
+								<li><a href="/photos/album">アルバム</a></li>
+							</ul>
+						</li>
+						<li>
+							<h4 class="review"><a href="/reviews">搭乗レビュー<span class="num">Review</span></a></h4>
+						</li>
+						<li>
+							<h4 class="member"><a href="/members">FlyTeamメンバー<span class="num">Member</span></a></h4>
+							<ul class="footer-nav-menu-sub">
+								<li><a href="/members/photo">写真の多い人</a></li>
+								<li><a href="/members/message">新着メッセージ</a></li>
+								<li><a href="/members/access">昨日のアクセス</a></li>
+								<li><a href="/members/comments">コメント一覧</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="simple-list footer-sub-menu">
+						<li><a href="/alliance">アライアンス</a></li>
+						<li><a href="/ffps">マイレージプログラム</a></li>
+						<li><a href="/area">エリア別に探す</a></li>
+						<li><a href="/area/asia/japan">日本の航空会社・空港</a></li>
+						<li><a href="/links">リンク集</a></li>
+					</ul>
+				</div>
+				<div class="footer-box-right">
+					<div class="footer-displayboard">
+						<p class="footer-logo"><a href="/"><img src="/img/logo_footer.png" alt="FlyTeam"/></a></p>
+					</div>
+					<div class="footer-box-right-lower">
+						<p class="footer-copy">観る派も、乗る派も。航空機好き集まれ！</p>
+						<p class="footer-copy-sub">FlyTeam（フライチーム）は航空ファン・飛行機利用者が集い、情報収集・交換するためのコミュニティサイトです。<a href="#">詳しくはこちら</a></p>
+						<div class="footer-box-right-lower-left">
+							<ul class="footer-nav-menu-social">
+								<li class="twitter"><a href="http://twitter.com/FlyTeamJp/" target="blank">FlyTeamJp</a></li>
+								<li class="twitter"><a href="http://twitter.com/FlyTeamNews/" target="blank">FlyTeamNews</a></li>
+								<li class="facebook"><a href="http://twitter.com/FlyTeamNews/" target="blank">FlyTeam</a></li>
+							</ul>
+							<ul class="simple-list footer-sub-menu">
+								<li><a href="/aboutus">このサイトについて</a></li>
+								<li><a href="/aboutus/link">リンクについて</a></li>
+								<li><a href="/docs/terms">利用規約</a></li>
+								<li><a href="/docs/privacy">プライバシーポリシー</a></li>
+							</ul>
+						</div>
+						<div class="footer-box-right-lower-right">
+							<dl class="dl-flapboard">
+								<dt>会員数<span class="num">Members</span></dt>
+								<dd><a href="/members"><span class="num">1,248</span>名</a></dd>
+								<dt>写真数<span class="num">Photos</span></dt>
+								<dd><a href="/photos"><span class="num">1,500,249</span>枚</a></dd>
+								<dt>掲載路線数<span class="num">Routes</span></dt>
+								<dd><a href="/routes"><span class="num">1,500,249</span>件</a></dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p class="copyright"><small>Copyright © 2010 - 2011 FlyTeam All rights reserved.</small></p>
+	</div>
+</body>
+</html>

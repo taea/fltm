@@ -208,15 +208,29 @@ function list_close(data){
 							<h2>飛行機フォト（写真）</h2>
 							<div class="inner">
 								<p>うっきーさんが、撮影した航空機フォト（写真）の一覧投稿日（新しい順）です。</p>
-								<!-- ************開閉リスト（デフォルト）************ -->
+								<!-- ************開閉リスト２（選択済みの場合）************ -->
 								<!-- 開閉リスト全体を囲う div class="dropdown" を追加-->
 								<div class="dropdown">
-								<!-- class名を変更 ul liに（タブ部分） open,close class追加 -->
+									<!-- 選択条件名をstrongに -->
+									<!-- <p class="ext">→<p>に（以下同様） -->
+									<p class="result">
+										<!--  []取る class="spot" class="open" class="close" class="searchclear" 追加-->
+										現在の表示：<strong>シアトル タコマ国際空港</strong>
+											<a href="/member/ukki/photo_spot/seattle–tacoma-international-airport" class="spot">地図</a>
+											<span id="airport_title_open" class="open" ><a href="javascript:void(0)" onclick="javascript:list_open(&quot;airport&quot;)"><strong>絞り込み条件を変更する</strong></a>
+												<a href="/member/ukki/photo/post/direction:desc" class="searchclear">絞り込み解除</a>
+											</span>
+											<span id="airport_title_close" style = "display: none" class="close"><a href="javascript:void(0)" onclick="javascript:list_close(&quot;airport&quot;)"><strong>絞り込み条件を閉じる</strong></a></span>
+									</p>
+									<p class="result">
+										撮影スポット情報が、<span class="num">1</span>件登録されています。
+										<span id="photo_spot_title_open" class="open"><a href="javascript:void(0)" onclick="javascript:list_open(&quot;photo_spot&quot;)">撮影スポットで絞り込む</a></span><span id="photo_spot_title_close" style = "display: none" class="close"> <a href="javascript:void(0)" onclick="javascript:list_close(&quot;photo_spot&quot;)">撮影スポットを閉じる</a></span>
+									</p>
+									<!-- 撮影スポット表示　タブの下に移動 -->
 									<ul class="nav_dropdown">
 										<li>
 											<!-- 航空会社一覧→航空会社（一覧を削除） -->
 											<div id="airline_open" class="open">
-												<!-- <p class="ext">→<p>に（以下同様） -->
 												<p><a href="javascript:void(0)" onclick="javascript:list_open(&quot;airline&quot;)">航空会社で絞り込む</a></p>
 											</div>
 											<div id="airline_close" style = "display: none" class="close">
@@ -228,7 +242,7 @@ function list_close(data){
 											<div id="airport_open" class="open">
 												<p><a href="javascript:void(0)" onclick="javascript:list_open(&quot;airport&quot;)">空港で絞り込む</a></p>
 											</div>
-											<div id="airport_close" style = "display: none" class="close"><p><a href="javascript:void(0)" onclick="javascript:list_close(&quot;airport&quot;)">空港一覧を閉じる</a></p></div>
+											<div id="airport_close" style = "display: none" class="close"><p><a href="javascript:void(0)" onclick="javascript:list_close(&quot;airport&quot;)">空港を閉じる</a></p></div>
 										</li>
 										<li>
 											<!-- 機材一覧→機材（一覧を削除） -->
@@ -237,6 +251,15 @@ function list_close(data){
 											</div>
 											<div id="aircraft_close" style = "display: none" class="close">
 												<p><a href="javascript:void(0)" onclick="javascript:list_close(&quot;aircraft&quot;)">機材を閉じる</a></p>
+											</div>
+										</li>
+										<li>
+											<!-- 撮影スポットをタブ追加 -->
+											<div id="photo_spot_open" class="open">
+												<p><a href="javascript:void(0)" onclick="javascript:list_open(&quot;photo_spot&quot;)">撮影スポットで絞り込む</a></p>
+											</div>
+											<div id="photo_spot_close" style = "display: none" class="close">
+												<p><a href="javascript:void(0)" onclick="javascript:list_close(&quot;photo_spot&quot;)">撮影スポットを閉じる</a></p>
 											</div>
 										</li>
 									</ul>
@@ -305,7 +328,7 @@ function list_close(data){
 												<ul>
 											</div>
 										</div>
-										<!-- continuesに close 追加 -->
+										<!-- continuesに -->
 										<p class="continues close"><a href="javascript:void(0)" onclick="javascript:list_close(&quot;airline&quot;)">航空会社一覧を閉じる</a></p>
 									</div>
 									<div class="section" id="airport_list" style = "display: none">
@@ -383,8 +406,22 @@ function list_close(data){
 										</div>
 										<p class="continues close"><a href="javascript:void(0)" onclick="javascript:list_close(&quot;aircraft&quot;)">機材一覧を閉じる</a></p>
 									</div>
+									<div class="section" id="photo_spot_list" style = "display: none">
+										<h3>撮影スポット一覧</h3>
+											<div class="list_boxes">
+												<div class="list_box list_3_1">
+													<ul class="list_link">
+														<li><a href="/member/ukki/photo/airport:seattle–tacoma-international-airport/spot_id:538">Water Tower</a></li>
+													</ul>
+												</div>
+												<div class="list_box list_3_2">
+													<ul>
+													</ul>
+												</div>
+											</div>
+											<p class="continues close"><a href="javascript:void(0)" onclick="javascript:list_close(&quot;photo_spot&quot;)">撮影スポット一覧を閉じる</a></p>
+										</div>
 								</div>
-								<!-- /開閉リスト終わり -->
 								<!-- ************sort************  -->
 								<!-- listに変更 -->
 								<div class="sort">
@@ -419,22 +456,6 @@ function list_close(data){
 									</div>
 									<div class="next">
 										<a href="/member/ukki/photo/post/page:2/direction:desc">次の<span class="num">20</span>件</a>
-									</div>
-								</div>
-								<!-- ************paging test2************ -->
-								<div class="paging">
-									<!-- numついか -->
-									<div class="count">
-									<span class="num">220</span>件～<span class="num">230</span>件(全<span class="num">15367</span>件)
-									</div>
-									<div class="prev disabled">
-										前の<span class="num">20</span>件
-									</div>
-									<div class="numbering">
-										<span class="current">101</span><span><a href="/member/ukki/photo/post/page:2/direction:desc">102</a></span><span><a href="/member/ukki/photo/post/page:3/direction:desc">103</a></span><span><a href="/member/ukki/photo/post/page:4/direction:desc">104</a></span><span><a href="/member/ukki/photo/post/page:5/direction:desc">105</a></span><span><a href="/member/ukki/photo/post/page:6/direction:desc">106</a></span>
-									</div>
-									<div class="next disabled">
-										次の<span class="num">20</span>件
 									</div>
 								</div>
 								<!-- list_260をとる -->

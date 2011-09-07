@@ -169,6 +169,10 @@ p.continues{
 .continues a:hover{
 	background: url(/img/csl_more_hover.png) no-repeat right center;
 }
+.continues.close a{
+	padding-right: 11px;
+	background: url(/img/csl_m_upper.gif) no-repeat right center;
+}
 /*--------------------BUTTON----------------------*/
 .btn-common a{
 	display: block;
@@ -251,8 +255,8 @@ p.continues{
 	display: block;
 	padding-top:2px;
 	padding-bottom: 2px;
-	padding-left: 8px;
-	background: url(/img/csl_s.gif) no-repeat left center;
+	padding-left: 7px;
+	background: url(/img/csl_s.gif) no-repeat left 0.7em;
 }
 .simple-num-list{
 	list-style: decimal;
@@ -989,7 +993,111 @@ th{
 	-webkit-border-radius: 0 0 6px 6px;
 	-moz-border-radius: 0 0 6px 6px;
 }
-
+/*--------------------DROPDOWN----------------------*/
+.dropdown{
+	background: #EEE;
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	position: relative;
+	z-index: 1;
+}
+.dropdown:after{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.nav_dropdown{
+	margin:0;
+	margin-left: 10px;
+	position: relative;
+	z-index: 4;
+}
+.nav_dropdown:after{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.nav_dropdown li{
+	float: left;
+	padding: 0;
+	margin: 0;
+	height: 30px;
+	line-height: 30px;
+}
+.nav_dropdown li div a{
+	display: block;
+	padding-left: 22px;
+	padding-right: 10px;
+	margin: 0;
+	height: 30px;
+	line-height: 30px;
+}
+.nav_dropdown li div{
+	margin:0;
+	padding: none;
+}
+.nav_dropdown li div.open a{
+	background:url(/img/csl_m_lower.gif) no-repeat 8px center;
+}
+.nav_dropdown li div.close a{
+	background:#FFF url(/img/csl_m_upper.gif) no-repeat 8px center;
+	border:1px solid #DDD;
+	border-bottom: none;
+	border-radius: 6px 6px 0 0;
+	-webkit-border-radius: 6px 6px 0 0;
+	-moz-border-radius: 6px 6px 0 0;
+	-webkit-box-shadow:0px -1px 2px rgba(0,0,0,0.1);
+	-moz-box-shadow:0px -1px 2px rgba(0,0,0,0.1);
+}
+.dropdown .section{
+	margin:0;
+	position: relative;
+	z-index: 2;
+}
+.dropdown .list_box{
+	width:180px;
+	font-size: 12px;
+}
+.dropdown .result{
+	background: #FFF;
+	padding: 5px 10px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	position: relative;
+}
+.dropdown a.spot{
+	margin-left: 5px;
+	padding-left: 13px;
+	background: url(/img/icns_footer.png) no-repeat left -937px;
+	font-size: 12px;
+}
+.dropdown span.open a{
+	margin-left: 10px;
+	padding-left: 13px;
+	background:url(/img/csl_m_lower.gif) no-repeat 0 center;
+}
+.dropdown span.close a{
+	margin-left: 10px;
+	padding-left: 13px;
+	background:url(/img/csl_m_upper.gif) no-repeat 0 center;
+}
+.dropdown a.searchclear{
+	padding-left: 15px !important;
+	background:url(/img/icn_close.png) no-repeat 0 center !important;
+	font-size: 12px;
+	color: #666;
+	position: absolute;
+	right:10px;
+	top:5px;
+}
 
 /*--------------------SECTION-SIDEBAR----------------------*/
 .section.section-sidebar{
@@ -1949,11 +2057,8 @@ th{
 }
 /*profile*/
 .profile{
-	background: #F7B52C;
+	background: #d5e5f3;
 	padding: 20px;
-	border-radius: 4px;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
 }
 .profile .image{
 	float: left;
@@ -2009,21 +2114,23 @@ th{
 	padding: 5px;
 	background: #FFF;
 	margin-bottom: 5px;
-	border: 1px solid #e8a52c;
+	border: 1px solid #c9d9e7;
 	-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,0.1),1px 1px 0 rgba(255,255,255,0.2);
 	-moz-box-shadow: inset 1px 1px 0 rgba(0,0,0,0.1),1px 1px 0 rgba(255,255,255,0.2);
 	height: 30px;
 	line-height: 30px;
+	color: #0178D8;
 }
 .profile .member dt a strong{
 	font-size: 20px;
 }
 .profile .member dt a:hover{
-	background: #EEE;
+	background: #fbf5b0;
 	color: #0467b6;
+	text-decoration: underline;
 }
 .member-data{
-	color: #7a5817;
+	color: #666;
 }
 .member-data:after{
 	content: ".";
@@ -2035,15 +2142,14 @@ th{
 .member-data li{
 	float: left;
 	margin-right: 5px;
-	text-shadow: 1px 1px 0 rgba(255,255,255,0.2);
-	font-weight: bold;
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
 	font-size: 12px;
 }
 .member-data li:after{
 	content:'|';
-	color: rgba(255,255,255,0.2);
+	color: rgba(255,255,255,0.8);
 	margin-left: 5px;
-	text-shadow: 1px 0px 0 rgba(0,0,0,0.2);
+	text-shadow: 1px 0px 0 rgba(0,0,0,0.15);
 }
 .profile-upper{
 	margin-bottom: 12px;
@@ -2062,9 +2168,6 @@ th{
 	-moz-border-radius: 4px;
 	padding: 10px;
 	background: #FFF;
-	border: 1px solid #e8a52c;
-	-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,0.1),1px 1px 0 rgba(255,255,255,0.2);
-	-moz-box-shadow: inset 1px 1px 0 rgba(0,0,0,0.1),1px 1px 0 rgba(255,255,255,0.2);
 	position: relative;
 }
 .profile .comments p{
@@ -2075,11 +2178,11 @@ th{
 	display: block;
 	height: 0px;
 	width: 0px;
-  border:8px solid #F7B52C;
+  border:8px solid #d5e5f3;
   border-bottom-color:#FFF;
   position: absolute;
   left:25px;
-  top:-15px;
+  top:-16px;
  }
 .profile .summary{
 	margin-top:10px;
@@ -2108,15 +2211,15 @@ th{
 }
 .profile .summary li ul li:after{
 	content:'|';
-	color: rgba(255,255,255,0.2);
+	color: rgba(255,255,255,0.6);
 	margin-left: 5px;
-	text-shadow: 1px 0px 0 rgba(0,0,0,0.2);
+	text-shadow: 1px 0px 0 rgba(0,0,0,0.15);
 }
 .profile .summary span.parent:after{
 	content:'〉';
-	color: rgba(255,255,255,0.2);
+	color: rgba(255,255,255,0.6);
 	margin-left: 5px;
-	text-shadow: 1px 0px 0 rgba(0,0,0,0.2);
+	text-shadow: 1px 0px 0 rgba(0,0,0,0.15);
 }
 
 .profile .summary li.photos{
@@ -2308,10 +2411,16 @@ th{
 .photo li .profile .image img{
 	height: 28px;
 	width: 28px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
 }
 .photo li .profile .image a:after{
 	height: 28px;
 	width: 28px;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
 }
 .photo li .profile p{
 	margin:0;
@@ -2323,9 +2432,6 @@ th{
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
-	border: 1px solid #e8a52c;
-	-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,0.1),1px 1px 0 rgba(255,255,255,0.2);
-	-moz-box-shadow: inset 1px 1px 0 rgba(0,0,0,0.1),1px 1px 0 rgba(255,255,255,0.2);
 	position: relative;
 	margin-left: 10px;
 	z-index: 1;
@@ -2375,10 +2481,10 @@ th{
 	display: block;
 	height: 0px;
 	width: 0px;
-  border:7px solid #F7B52C;
+  border:6px solid #d5e5f3;
   border-right-color:#FFF;
   position: absolute;
-  left:-13px;
+  left:-12px;
   top:5px;
   z-index: 2;
  }
@@ -2496,6 +2602,7 @@ th{
 	padding-right: 5px;
 	font-size: 14px;
 }
+/*--------------------list_box----------------------*/
 .list_box{
 	width: 210px;
 	float: left;
@@ -2505,16 +2612,17 @@ th{
 .list_box list_3_3{
 	margin-right: 0;	
 }
-.list-boxes{
+.list_boxes{
 	margin:20px 0;
 }
-.list-boxes:after{
+.list_boxes:after{
 	content: ".";
 	display: block;
 	height: 0;
 	clear: both;
 	visibility: hidden;
 }
+
 /*--------------------AIRLINE----------------------*/
 .section.section_profile{
 	padding: 5px;

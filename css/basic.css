@@ -542,6 +542,14 @@ h1{
 	clear: both;
 	visibility: hidden;
 }
+.col2{
+	float: left;
+	width:328px;
+	margin-right: 20px;
+}
+.col2.last{
+	margin-right: 0;
+}
 /*--------------------HEADLINE----------------------*/
 h2{
 	display: block;
@@ -3020,7 +3028,14 @@ p.album_comments{
 .schedule .news_date{background: #148ACC;}
 .event .news_date{background: #6464AF;}
 .service .news_date{background: #AF779E;}
-
+/*--------------------PHOTO_SPOT----------------------*/
+.list_link.list_spot{
+	margin-bottom: 10px;
+}
+.list_link.list_spot li a{
+	background: url(/img/icns_footer.png) no-repeat left -936px;
+	padding-left: 14px;
+}
 /*--------------------ADJUST----------------------*/
 .mgnbtm10{
 	margin-bottom: 10px;

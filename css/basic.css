@@ -173,6 +173,9 @@ p.continues{
 	padding-right: 11px;
 	background: url(/img/csl_m_upper.gif) no-repeat right center;
 }
+.small_caption{
+	font-size: 10px;
+}
 /*--------------------BUTTON----------------------*/
 .btn-common a{
 	display: block;
@@ -282,6 +285,14 @@ ol.simple-list{
 	padding-right: 10px;
 	margin-right: 10px;
 	border-right: 1px solid #DDD;
+	margin-bottom: 5px;
+}
+.list_yoko:after{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
 }
 .itemize li{
 	float: left;
@@ -2768,6 +2779,12 @@ p.album_comments{
 	height: 0;
 	clear: both;
 	visibility: hidden;
+}
+.list7{
+	width:100px;
+	margin-right: 10px;
+	float: left;
+	font-size: 12px;
 }
 
 /*--------------------AIRLINE----------------------*/

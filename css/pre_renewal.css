@@ -64,47 +64,47 @@ display: inline-block;
 	font-family: Arial, Helvetica,sans-serif;
 	font-weight: bold;
 }
-.link-s{
+.link_s{
 	font-size: 12px;
 }
-.link-s a{
+.link_s a{
 	background: url(/images/csl-s.gif) no-repeat left 0.45em;
 	padding-left: 6px;
 }
-.link-s a:hover{
+.link_s a:hover{
 	text-decoration: underline;	
 }
-.link-s.white a{
+.link_s.white a{
 	color: #FFF;
 	background: url(/images/csl-s-w.gif) no-repeat left 0.45em;
 }
-.link-more{
+.link_more{
 	margin-top: 5px;
 	text-align: right;
 	font-size: 12px;
 }
-.link-more a{
+.link_more a{
 	padding-right: 8px;
 	background: url(/images/csl-more.gif) no-repeat right 0.5em;
 }
-.link-more a:hover{
+.link_more a:hover{
 	text-decoration: underline;
 }
-.link-more.down a{
+.link_more.down a{
 	padding-right: 8px;
 	background: url(/images/csl-more-down.gif) no-repeat right 0.5em;
 }
-.link-m{
+.link_m{
 	font-size: 14px;
 }
-.link-m a{
+.link_m a{
 	background: url(/images/csl-s.gif) no-repeat left 0.45em;
 	padding-left: 6px;
 }
-.link-m a:hover{
+.link_m a:hover{
 	text-decoration: underline;	
 }
-.link-m.white a{
+.link_m.white a{
 	color: #FFF;
 	background: url(/images/csl-s-w.gif) no-repeat left 0.45em;
 }

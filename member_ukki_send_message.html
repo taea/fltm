@@ -9,8 +9,95 @@
 <meta name="keywords" content="うっきー,投稿日,新しい順,新着,写真＋詳細,フォト,写真,撮影,航空会社,製造メーカー,機材,aircraft,aviation,flight,スポッター,FlyTeam,フライチーム"/>
 <link rel="stylesheet" type="text/css" href="/css/basic.css?20110421" />
 <script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+//focus→textareaの色変えるギミックは今回CSSの方で実装済みなので削除でもよい？
+//新規のfocus時の色（淡黄色　#fbf5b0）に変えておきました。
+/*
+	$(function(){
+		$(":text,:password,textarea").focus(function(){
+			$(this).css("background-color","#fbf5b0")
+		});
+		$(":text,:password,textarea").blur(function(){
+			$(this).css("background-color","#FFFFFF")
+		});
+
+	});
+*/
+	function message_post(){
+
+		var title = $("#message_title:input").val();
+		var comment = $("#message_comment:input").val();
+
+		if(title == ""){
+			alert("件名が、入力されていません。");
+			return false;
+		}
+		if(comment == ""){
+			alert("本文が、入力されていません。");
+			return false;
+		}
+
+		if(!window.confirm("本当にメッセージを送信しますか？")){
+			return false;
+		}
+
+		$("#message_wait").show();
+		$("#message_post").hide();
+		$("#message_msg").hide();
+
+		$.ajax({
+			type: "POST",
+			url: "/control_tower/message/mode:member_post" ,
+			data: { "member_id" : "1" ,"title" : title, "comment" : comment },
+			cache: false,
+			success: message_result ,
+			error: message_error ,
+			dataType: "json"
+		});
+	}
+
+	function message_error(){
+
+			$("#message_msg").html("エラーが発生しました。");
+			$("#message_msg").show();
+	}
+
+	function message_result(data){
+
+		$("#message_wait").hide();
+		$("#message_post").show();
+
+		if(data.status == "ok"){
+			$("#edit_message").hide();
+			$("#message_title").attr("value","");
+			$("#message_comment").attr("value","");
+			$("#message_msg").html(data.msg);
+			$("#message_msg").show();
+
+		}else{
+			$("#message_msg").html(data.msg);
+			$("#message_msg").show();
+		}
+
+	}
+	function review_bigger(){
+		var num = $("#message_comment").attr("rows");
+		num = num + 5
+		$("#message_comment").attr("rows", num);
+	}
+	
+//]]>
+</script>
+
 <script src="/js/common.js" type="text/javascript" charset="utf-8"></script>
-	</head>
+<link rel="shortcut icon" href="/img/favicon.ico">
+<meta name="google-site-verification" content="GfKubQMuOpcnHlHRxZFWopO6y3BRY3g81yNT__ht6vY" />
+<meta property="og:image" content="http://flyteam.jp/img/logo.gif" />
+
+<meta name="mixi-check-robots" CONTENT="noimage">
+<meta property="fb:admins" content="100000515304404" />
+</head>
 	<body>
 		<div class="header">
 			<div class="header-cont">
@@ -130,8 +217,39 @@
 					</div>
 					<!-- tab_after追加 -->
 					<!-- ▼▼▼▼▼▼CONTENTS▼▼▼▼▼▼▼ -->
-<div class="section clear"><h2>うっきーさんへダイレクトメッセージ（DM）を送る。</h2><div class="inner"><div id="edit_message"><p>うっきーさんへメッセージを送ることができます。<br /><span class="pv">『<a href="/docs/use_guide/post" target="_blank">コメント、DM（ダイレクトメッセージ）の利用ルール＆マナー</a>』をご確認の上、ご利用ください。</span></p><table class="tb_1"><tr><th class="tt_left">宛先:うっきーさん</th></tr><tr><td>件名：<input name="data[message_title]" type="text" value="" id="message_title" size="45" maxlength="100" /></td></tr><tr><td>本文：<div class="input textarea"><textarea name="data[message_comment]" cols="60" rows="10" id="message_comment" ></textarea></div><p><a href="javascript:void(0)" onclick="javascirpt:review_bigger()">枠を広げる▼</a></p></td></tr></table><input type="button" value="メッセージを送信する" id="message_post" onclick="javascript:message_post()" />ken_c_loさん、本人でない場合は、<a href="/control_tower/logout/?redirect_url=%2Fmember%2Fukki%2Fsend_message">こちら</a>。</div><div id="message_msg" style = "display: none"></div><div id="message_wait" style = "display: none"><img src="/img/ajax-loader.gif" alt="" /></div></div></div>
-
+					<div class="section tab_after">
+						<h2>うっきーさんへダイレクトメッセージ（DM）を送る。</h2>
+						<div class="inner">
+							<div id="edit_message">
+								<p>うっきーさんへメッセージを送ることができます。<br /><span class="pv">『<a href="/docs/use_guide/post" target="_blank">コメント、DM（ダイレクトメッセージ）の利用ルール＆マナー</a>』をご確認の上、ご利用ください。</span></p>
+								<!-- tableとる　タイトルはh3に -->
+								<h3>宛先:うっきーさん</h3>
+								<!-- inner追加 -->
+								<div class="inner">
+									<!-- 1行ずつform_wrapper floatで囲む　index.htmlのフォームフォーマット参照 -->
+									<div class="form_wrapper float">
+										<label>件名：</label>
+										<input name="data[message_title]" type="text" value="" id="message_title" class="large" size="45" maxlength="100" />
+									</div>
+									<div class="form_wrapper float">
+									<label>本文：</label>
+										<div class="input textarea">
+											<textarea name="data[message_comment]" cols="60" rows="10" id="message_comment" ></textarea>
+										</div>
+										<!-- p class="continues lower"追加　▼とる -->
+										<p class="continues lower"><a href="javascript:void(0)" onclick="javascirpt:review_bigger()">枠を広げる</a></p>
+										</div>
+									</div>
+									<div class="form_wrapper float">
+										<input type="button" value="メッセージを送信する" id="message_post" onclick="javascript:message_post()" />ken_c_loさん、本人でない場合は<a href="/control_tower/logout/?redirect_url=%2Fmember%2Fukki%2Fsend_message">こちら</a>。
+									</div>
+									<div id="message_msg" style = "display: none"></div>
+									<div id="message_wait" style = "display: none">
+										<img src="/img/ajax-loader.gif" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
 						<!-- ▲▲▲▲▲▲CONTENTS▲▲▲▲▲▲ -->
 					<!-- presents clear toru -->
 					<div class="section">
@@ -297,7 +415,7 @@
 						<div class="inner">
 							<form action="http://flyteam.jp/search/g" id="cse-search-box">
 								<div class="inner">
-									<div class="form-wrapper">
+									<div class="form_wrapper">
 										<input type="hidden" name="cx" value="partner-pub-3578152824462829:1919824454" />
 										<input type="hidden" name="cof" value="FORID:9" />
 										<input type="hidden" name="ie" value="UTF-8" />
@@ -312,7 +430,7 @@
 							<h3>２,３レターコード、レジ検索</h3>
 							<div class="inner">
 								<p class="explain">航空会社、空港、機体番号（レジ）の検索です。</p>
-								<div class="form-wrapper">
+								<div class="form_wrapper">
 									<form method="get" action="/search"><input name="q" type="text" size="12" value="" id="RegNumberQ" class="form-textarea" placeholder="例：HNL、RJTT、JAL、JL、JA8089 etc" /><input type="hidden" name="ref" size="12" value="airlines" id="RegNumberRef" /><input type="submit" label="" value="検索" class="form-submit"/>
 								</form>
 							</div>

@@ -2825,9 +2825,11 @@ h3.star_rating.sno{background:#EEE url(/img/star_rating.png) no-repeat 580px -32
 	height: 30px;
 	line-height: 30px;
 	color: #0178D8;
+	padding-left: 40px;
+	background: url(/img/icn_h3.png) no-repeat 5px -35px;
 }
 .album_title h3 a:hover{
-	background: #fbf5b0;
+	background: #fbf5b0 url(/img/icn_h3.png) no-repeat 5px -35px;
 	color: #0467b6;
 	text-decoration: underline;
 }

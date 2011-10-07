@@ -462,7 +462,7 @@ h2{
 	margin-right: 30px;
 	padding-top: 50px;
 }
-.footer-box-right{
+.footer-box_right{
 	width: 320px;
 	float: left;
 	background: url(/img/footer_signbar.png) no-repeat center top;
@@ -645,15 +645,15 @@ h2{
 .footer-nav-menu-social li.twitter a{background: url(/img/icns_footer.png) no-repeat left -734px;}
 .footer-nav-menu-social li.facebook a{background: url(/img/icns_footer.png) no-repeat left -769px;}
 
-.footer-box-right-lower-left{
+.footer-box_right-lower-left{
 	float: left;
 	width: 165px;
 }
-.footer-box-right-lower-right{
+.footer-box_right-lower-right{
 	float: right;
 	width: 145px;
 }
-.footer-box-right-lower:after{
+.footer-box_right-lower:after{
 	content: ".";
 	display: block;
 	height: 0;

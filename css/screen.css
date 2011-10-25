@@ -560,6 +560,14 @@ h1{
 	width:328px;
 	margin-right: 20px;
 }
+.col2:after{
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
 .col2.last{
 	margin-right: 0;
 }
@@ -625,7 +633,6 @@ input{
 	-moz-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.1), 1px 1px 0 rgba(255,255,255,0.5);
 }
 textarea{
-	color: #999;
 	background: #F5F6F7;
 	display: block;
 	padding:4px;
@@ -871,13 +878,13 @@ th,td{
 	border-right: none;
 }
 th{
-	background: #0098dd;
-	color: #FFF;
+	background: #d5e5f3;
+	color: #333;
 	text-align: center;
 	font-weight: bold;
-	text-shadow: -1px -1px 0 rgba(0,0,0,0.2);
-	-webkit-box-shadow:inset -1px 1px 0 rgba(255,255,255,0.3),inset 1px -1px 0 rgba(0,0,0,0.2);
-	-moz-box-shadow:inset -1px 1px 0 rgba(255,255,255,0.3),inset 1px -1px 0 rgba(0,0,0,0.2);
+	text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+	-webkit-box-shadow:inset -1px 1px 0 rgba(255,255,255,0.3),inset 1px -1px 0 rgba(0,0,0,0.05);
+	-moz-box-shadow:inset -1px 1px 0 rgba(255,255,255,0.3),inset 1px -1px 0 rgba(0,0,0,0.05);
 }
 /*--------------------tab_nav----------------------*/
 .tab_nav{
@@ -1024,6 +1031,7 @@ th{
 .dropdown .result{
 	background: #FFF;
 	padding: 5px 10px;
+	padding-right: 90px;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -1681,6 +1689,7 @@ th{
 	visibility: hidden;
 }
 .footer-nav-menu h4{
+	border:none;
 	margin:0;
 	padding:0;
 	height: 38px;
@@ -2148,6 +2157,7 @@ th{
 	margin-top:10px;
 	text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
 	font-size: 85%;
+	color: #777;
 }
 .profile .summary li ul li{
 	float: left;
@@ -2158,7 +2168,6 @@ th{
 .profile .summary span.parent{
 	float: left;
 	font-weight: bold;
-	width: 140px;
 	display: block;
 }
 .profile .summary li.photos:after, .profile .summary li.reviews:after{
@@ -2556,14 +2565,20 @@ th{
 .review_list li ul li.class.economy{background: #499;}
 .review_list li ul li.class.business{background: #4b76bd;}
 .review_list li ul li.class.first{background: #b48b3b;}
+.review_list li ul li.class.premium_economy{
+	background: #8eaf46 url(/img/icn_premium_economy.png) no-repeat 2px 4px;
+	text-indent:-9999px;
+}
+
 .review_list li ul li.review_title{
 	font-size: 100%;
 	float: none;
 	border-top: 1px dotted #DDD;
+	margin-left: 100px;
 }
 .review_list li ul li.review_title a{
 	display: block;
-	padding-left: 5px;
+	padding-left: 0px;
 	padding-right: 5px;
 }
 .review_list li ul li.review_title strong{
@@ -2622,12 +2637,23 @@ dl.review_rating:after{
 .review_rating.total dt{
 	font-size: 140%;
 }
-.review_rating.total dd.star_rating.s30{
+.review_rating.total dd.star_rating{
 width:150px;
-height: 26px;
+height: 28px;
 background:url(/img/star_rating.png) no-repeat 5px -390px;
 }
-
+.review_rating.total dd.star_rating.s50{background:url(/img/star_rating.png) no-repeat 5px -390px;}
+.review_rating.total dd.star_rating.s45{background:url(/img/star_rating.png) no-repeat 5px -430px;}
+.review_rating.total dd.star_rating.s40{background:url(/img/star_rating.png) no-repeat 5px -470px;}
+.review_rating.total dd.star_rating.s35{background:url(/img/star_rating.png) no-repeat 5px -510px;}
+.review_rating.total dd.star_rating.s30{background:url(/img/star_rating.png) no-repeat 5px -550px;}
+.review_rating.total dd.star_rating.s25{background:url(/img/star_rating.png) no-repeat 5px -590px;}
+.review_rating.total dd.star_rating.s20{background:url(/img/star_rating.png) no-repeat 5px -630px;}
+.review_rating.total dd.star_rating.s15{background:url(/img/star_rating.png) no-repeat 5px -670px;}
+.review_rating.total dd.star_rating.s10{background:url(/img/star_rating.png) no-repeat 5px -710px;}
+.review_rating.total dd.star_rating.s05{background:url(/img/star_rating.png) no-repeat 5px -750px;}
+.review_rating.total dd.star_rating.s00{background:url(/img/star_rating.png) no-repeat 5px -790px;}
+.review_rating.total dd.star_rating.sno{background:url(/img/star_rating.png) no-repeat 5px -830px;}
 
 h3.star_rating{background:#EEE url(/img/star_rating.png) no-repeat 580px 3px;}
 h3.star_rating.s50{background:#EEE url(/img/star_rating.png) no-repeat 580px 3px;}
@@ -2900,10 +2926,12 @@ p.album_comments{
 	clear: both;
 	visibility: hidden;
 }
-.list7{
+.list6{
 	width:100px;
 	margin-right: 10px;
 	float: left;
+}
+.presents .list6, .presents .list_box{
 	font-size: 80%;
 }
 
@@ -3179,29 +3207,40 @@ p.album_comments{
 	padding-bottom:10px;
 	border-bottom: 1px dotted #DDD;
 	font-weight: bold;
-	background: url(/img/mappins.png) no-repeat left 5px;
+	background-image: url(/img/mappins.png) no-repeat;
+	background-position: left 5px;
+	overflow: hidden;
 	padding-left: 30px;
+	position: relative;
 }
-.list_mapspot li.p01 a{background: url(/img/mappins.png) no-repeat left 5px;}
-.list_mapspot li.p02 a{background: url(/img/mappins.png) no-repeat left -35px;}
-.list_mapspot li.p03 a{background: url(/img/mappins.png) no-repeat left -75px;}
-.list_mapspot li.p04 a{background: url(/img/mappins.png) no-repeat left -115px;}
-.list_mapspot li.p05 a{background: url(/img/mappins.png) no-repeat left -155px;}
-.list_mapspot li.p06 a{background: url(/img/mappins.png) no-repeat left -195px;}
-.list_mapspot li.p07 a{background: url(/img/mappins.png) no-repeat left -235px;}
-.list_mapspot li.p08 a{background: url(/img/mappins.png) no-repeat left -275px;}
-.list_mapspot li.p09 a{background: url(/img/mappins.png) no-repeat left -315px;}
-.list_mapspot li.p10 a{background: url(/img/mappins.png) no-repeat left -355px;}
-.list_mapspot li.p11 a{background: url(/img/mappins.png) no-repeat left -395px;}
-.list_mapspot li.p12 a{background: url(/img/mappins.png) no-repeat left -435px;}
-.list_mapspot li.p13 a{background: url(/img/mappins.png) no-repeat left -475px;}
-.list_mapspot li.p14 a{background: url(/img/mappins.png) no-repeat left -515px;}
-.list_mapspot li.p15 a{background: url(/img/mappins.png) no-repeat left -555px;}
-.list_mapspot li.p16 a{background: url(/img/mappins.png) no-repeat left -595px;}
-.list_mapspot li.p17 a{background: url(/img/mappins.png) no-repeat left -635px;}
-.list_mapspot li.p18 a{background: url(/img/mappins.png) no-repeat left -675px;}
-.list_mapspot li.p19 a{background: url(/img/mappins.png) no-repeat left -715px;}
-.list_mapspot li.p20 a{background: url(/img/mappins.png) no-repeat left -755px;}
+.list_mapspot li a:before{
+	content: "";
+	position: absolute;
+	top:0;
+	left:0;
+	width: 28px;
+	height: 36px;
+}
+.list_mapspot li.p01 a:before{background: url(/img/mappins.png) no-repeat left 5px;}
+.list_mapspot li.p02 a:before{background: url(/img/mappins.png) no-repeat left -35px;}
+.list_mapspot li.p03 a:before{background: url(/img/mappins.png) no-repeat left -75px;}
+.list_mapspot li.p04 a:before{background: url(/img/mappins.png) no-repeat left -115px;}
+.list_mapspot li.p05 a:before{background: url(/img/mappins.png) no-repeat left -155px;}
+.list_mapspot li.p06 a:before{background: url(/img/mappins.png) no-repeat left -195px;}
+.list_mapspot li.p07 a:before{background: url(/img/mappins.png) no-repeat left -235px;}
+.list_mapspot li.p08 a:before{background: url(/img/mappins.png) no-repeat left -275px;}
+.list_mapspot li.p09 a:before{background: url(/img/mappins.png) no-repeat left -315px;}
+.list_mapspot li.p10 a:before{background: url(/img/mappins.png) no-repeat left -355px;}
+.list_mapspot li.p11 a:before{background: url(/img/mappins.png) no-repeat left -395px;}
+.list_mapspot li.p12 a:before{background: url(/img/mappins.png) no-repeat left -435px;}
+.list_mapspot li.p13 a:before{background: url(/img/mappins.png) no-repeat left -475px;}
+.list_mapspot li.p14 a:before{background: url(/img/mappins.png) no-repeat left -515px;}
+.list_mapspot li.p15 a:before{background: url(/img/mappins.png) no-repeat left -555px;}
+.list_mapspot li.p16 a:before{background: url(/img/mappins.png) no-repeat left -595px;}
+.list_mapspot li.p17 a:before{background: url(/img/mappins.png) no-repeat left -635px;}
+.list_mapspot li.p18 a:before{background: url(/img/mappins.png) no-repeat left -675px;}
+.list_mapspot li.p19 a:before{background: url(/img/mappins.png) no-repeat left -715px;}
+.list_mapspot li.p20 a:before{background: url(/img/mappins.png) no-repeat left -755px;}
 
 
 .list_mapspot_wrapper{
@@ -3252,29 +3291,37 @@ p.album_comments{
 	padding-bottom:10px;
 	border-bottom: 1px dotted #DDD;
 	font-weight: bold;
-	background: url(/img/mappins.png) no-repeat left 5px;
+	background: none;
 	padding-left: 30px;
 }
-.photo_spot_summary h3.p01 a{background: url(/img/mappins.png) no-repeat left 5px;}
-.photo_spot_summary h3.p02 a{background: url(/img/mappins.png) no-repeat left -35px;}
-.photo_spot_summary h3.p03 a{background: url(/img/mappins.png) no-repeat left -75px;}
-.photo_spot_summary h3.p04 a{background: url(/img/mappins.png) no-repeat left -115px;}
-.photo_spot_summary h3.p05 a{background: url(/img/mappins.png) no-repeat left -155px;}
-.photo_spot_summary h3.p06 a{background: url(/img/mappins.png) no-repeat left -195px;}
-.photo_spot_summary h3.p07 a{background: url(/img/mappins.png) no-repeat left -235px;}
-.photo_spot_summary h3.p08 a{background: url(/img/mappins.png) no-repeat left -275px;}
-.photo_spot_summary h3.p09 a{background: url(/img/mappins.png) no-repeat left -315px;}
-.photo_spot_summary h3.p10 a{background: url(/img/mappins.png) no-repeat left -355px;}
-.photo_spot_summary h3.p11 a{background: url(/img/mappins.png) no-repeat left -395px;}
-.photo_spot_summary h3.p12 a{background: url(/img/mappins.png) no-repeat left -435px;}
-.photo_spot_summary h3.p13 a{background: url(/img/mappins.png) no-repeat left -475px;}
-.photo_spot_summary h3.p14 a{background: url(/img/mappins.png) no-repeat left -515px;}
-.photo_spot_summary h3.p15 a{background: url(/img/mappins.png) no-repeat left -555px;}
-.photo_spot_summary h3.p16 a{background: url(/img/mappins.png) no-repeat left -595px;}
-.photo_spot_summary h3.p17 a{background: url(/img/mappins.png) no-repeat left -635px;}
-.photo_spot_summary h3.p18 a{background: url(/img/mappins.png) no-repeat left -675px;}
-.photo_spot_summary h3.p19 a{background: url(/img/mappins.png) no-repeat left -715px;}
-.photo_spot_summary h3.p20 a{background: url(/img/mappins.png) no-repeat left -755px;}
+.photo_spot_summary h3 a:before{
+	content: "";
+	position: absolute;
+	top:10px;
+	left:20px;
+	width: 28px;
+	height: 36px;
+}
+.photo_spot_summary h3.p01 a:before{background: url(/img/mappins.png) no-repeat left 5px;}
+.photo_spot_summary h3.p02 a:before{background: url(/img/mappins.png) no-repeat left -35px;}
+.photo_spot_summary h3.p03 a:before{background: url(/img/mappins.png) no-repeat left -75px;}
+.photo_spot_summary h3.p04 a:before{background: url(/img/mappins.png) no-repeat left -115px;}
+.photo_spot_summary h3.p05 a:before{background: url(/img/mappins.png) no-repeat left -155px;}
+.photo_spot_summary h3.p06 a:before{background: url(/img/mappins.png) no-repeat left -195px;}
+.photo_spot_summary h3.p07 a:before{background: url(/img/mappins.png) no-repeat left -235px;}
+.photo_spot_summary h3.p08 a:before{background: url(/img/mappins.png) no-repeat left -275px;}
+.photo_spot_summary h3.p09 a:before{background: url(/img/mappins.png) no-repeat left -315px;}
+.photo_spot_summary h3.p10 a:before{background: url(/img/mappins.png) no-repeat left -355px;}
+.photo_spot_summary h3.p11 a:before{background: url(/img/mappins.png) no-repeat left -395px;}
+.photo_spot_summary h3.p12 a:before{background: url(/img/mappins.png) no-repeat left -435px;}
+.photo_spot_summary h3.p13 a:before{background: url(/img/mappins.png) no-repeat left -475px;}
+.photo_spot_summary h3.p14 a:before{background: url(/img/mappins.png) no-repeat left -515px;}
+.photo_spot_summary h3.p15 a:before{background: url(/img/mappins.png) no-repeat left -555px;}
+.photo_spot_summary h3.p16 a:before{background: url(/img/mappins.png) no-repeat left -595px;}
+.photo_spot_summary h3.p17 a:before{background: url(/img/mappins.png) no-repeat left -635px;}
+.photo_spot_summary h3.p18 a:before{background: url(/img/mappins.png) no-repeat left -675px;}
+.photo_spot_summary h3.p19 a:before{background: url(/img/mappins.png) no-repeat left -715px;}
+.photo_spot_summary h3.p20 a:before{background: url(/img/mappins.png) no-repeat left -755px;}
 
 /*--------------------ADJUST----------------------*/
 .mgnbtm10{

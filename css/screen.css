@@ -2886,7 +2886,7 @@ p.album_comments{
 	border-bottom: 1px dotted #DDD;
 }
 .album_title .itemize{
-	width:400px;
+	width:390px;
 	float: left;
 }
 .album_title .date{
@@ -2896,7 +2896,7 @@ p.album_comments{
 	margin-left: 10px;
 	text-align: right;
 	float: left;
-	width:205px;
+	width:215px;
 }
 /*
 .album_title .itemize{

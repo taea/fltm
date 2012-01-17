@@ -1,6 +1,6 @@
 @charset "utf-8";
 /*--------------------Reset----------------------*/
-html, body, h1, h2, h3, h4, h5, ul, ol, dl, li, dt, dd, p, header, hgroup, section, article, aside, hgroup, footer, figure, figcaption, nav, fieldset {
+html, body, h1, h2, h3, h4, h5, ul, ol, dl, li, dt, dd, p, header, hgroup, section_box, article, aside, hgroup, footer, figure, figcaption, nav, fieldset {
 	margin:0;
 	padding:0;
 	font-size: 100%;
@@ -10,7 +10,7 @@ body{
 	line-height: 1.0;
 	-webkit-text-size-adjust: none;
 }
-article, aside, canvas, datails, figcaption, figure, footer, header, hgroup, menu, nav, section, summary{
+article, aside, canvas, datails, figcaption, figure, footer, header, hgroup, menu, nav, section_box, summary{
 	display: block;
 }
 img{
@@ -110,7 +110,7 @@ display: inline-block;
 	color: #ef8136;
 	margin:30px auto;
 }
-.section{
+.section_box{
 	padding: 20px;
 	background: #FFF;
 	border:1px solid #DDD;
@@ -121,7 +121,7 @@ display: inline-block;
 	-moz-box-shadow: 0px 0px 2px rgba(0,0,0,0.1);
 	margin-bottom: 10px;
 }
-.box_right .section{
+.box_right .section_box{
 	padding: 10px;
 	font-size: 12px;
 }
@@ -951,7 +951,7 @@ td{
   margin-top: 0;
   border:1px solid #0481ba;
 }
-.section.tab_after{
+.section_box.tab_after{
 	border-radius: 0 0 6px 6px;
 	-webkit-border-radius: 0 0 6px 6px;
 	-moz-border-radius: 0 0 6px 6px;
@@ -1019,7 +1019,7 @@ td{
 	-webkit-box-shadow:0px -1px 2px rgba(0,0,0,0.1);
 	-moz-box-shadow:0px -1px 2px rgba(0,0,0,0.1);
 }
-.dropdown .section{
+.dropdown .section_box{
 	margin:0;
 	position: relative;
 	z-index: 2;
@@ -1062,14 +1062,14 @@ td{
 	top:5px;
 }
 
-/*--------------------section_sidebar----------------------*/
-.section.section_sidebar{
+/*--------------------section_box_sidebar----------------------*/
+.section_box.section_box_sidebar{
 	padding:0;
 }
-.section.section_sidebar .inner{
+.section_box.section_box_sidebar .inner{
 	padding: 0 10px 10px 10px;
 }
-.section.section_sidebar h3{
+.section_box.section_box_sidebar h3{
 	font-size: 14px;
 	background:none;
 	border:none;
@@ -1091,14 +1091,14 @@ td{
 	-webkit-box-shadow:inset -1px 1px 0 rgba(255,255,255,0.3);
 	-moz-box-shadow:inset -1px 1px 0 rgba(255,255,255,0.3);
 }
-.section.section_sidebar h3 a{
+.section_box.section_box_sidebar h3 a{
 	font-size: 14px;
 	color: #FFF;
 	padding-right: 10px;
 	background: url(/img/csl_more_w.png) no-repeat right center;
 	padding:0;
 }
-.section.section_sidebar h3 a:hover{
+.section_box.section_box_sidebar h3 a:hover{
 	text-decoration: underline;
 }
 /*--------------------side_search_box----------------------*/
@@ -1149,7 +1149,7 @@ td{
 	-webkit-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.2);
 	-moz-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.2);
 }
-.section.side_search_box h3{
+.section_box.side_search_box h3{
 	font-size: 14px;
 	text-shadow: -1px -1px rgba(0,0,0,0.3);
 	background:none;
@@ -1335,7 +1335,7 @@ td{
 	font-size: 18px;
 	font-weight: bold;
 }
-.section_sidebar .news_list li{
+.section_box_sidebar .news_list li{
 	padding-left: 30px;
 }
 
@@ -1977,14 +1977,14 @@ td{
 	visibility: hidden;
 }
 /*--------------------SOCIAL BUTTON----------------------*/
-.section.section-socialbtn{
+.section_box.section_box-socialbtn{
 	padding: 10px;
 	padding-bottom: 10px;
 }
-.section-socialbtn .inner{
+.section_box-socialbtn .inner{
 	margin:0;
 }
-.section-socialbtn h3{
+.section_box-socialbtn h3{
 	background:none;
 	border:none;
 	padding: 0;
@@ -2020,11 +2020,11 @@ td{
 	margin-top: 5px;
 }
 /*--------------------MEMBER----------------------*/
-.section.section_profile{
+.section_box.section_box_profile{
 	padding: 5px;
 	margin-bottom: 30px;
 }
-.section.section_profile .inner{
+.section_box.section_box_profile .inner{
 	margin:0;
 	margin-top: 0;
 }
@@ -3000,11 +3000,11 @@ h3.star_rating.sno{background:#EEE url(/img/star_rating.png) no-repeat 580px -32
 	color: #666;
 }
 /*--------------------*SUMMARY*----------------------*/
-.section.summary{
+.section_box.summary{
 	font-size: 85%;
 }
 /*--------------------*ALBUM*----------------------*/
-.section_album{
+.section_box_album{
 	padding:0;
 	margin-bottom: 20px;
 	border-bottom: 1px solid #DDD;
@@ -3134,11 +3134,11 @@ p.album_comments{
 }
 
 /*--------------------AIRLINE----------------------*/
-.section.section_profile{
+.section_box.section_box_profile{
 	padding: 5px;
 	margin-bottom: 30px;
 }
-.section.section_profile .inner{
+.section_box.section_box_profile .inner{
 	margin:0;
 	margin-top: 0;
 }
@@ -3594,7 +3594,7 @@ p.album_comments{
 .photo_spot_summary h3.p20 a:before{background: url(/img/mappins.png) no-repeat left -755px;}
 
 /*--------------------WELCOME_MEMBER----------------------*/
-.welcome_member.section{
+.welcome_member.section_box{
 	padding: 5px;
 	color: #FFF;
 	text-shadow: -1px -1px rgba(0,0,0,0.3);

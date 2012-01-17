@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /*--------------------Reset----------------------*/
-html, body, h1, h2, h3, h4, h5, ul, ol, dl, li, dt, dd, p, header, hgroup, section, article, aside, hgroup, footer, figure, figcaption, nav, fieldset {
+html, body, h1, h2, h3, h4, h5, ul, ol, dl, li, dt, dd, p, header, hgroup, section_box, article, aside, hgroup, footer, figure, figcaption, nav, fieldset {
 	margin:0;
 	padding:0;
 	font-size: 100%;
@@ -11,7 +11,7 @@ body{
 	line-height: 1.0;
 	-webkit-text-size-adjust: none;
 }
-article, aside, canvas, datails, figcaption, figure, footer, header, hgroup, menu, nav, section, summary{
+article, aside, canvas, datails, figcaption, figure, footer, header, hgroup, menu, nav, section_box, summary{
 	display: block;
 }
 img{
@@ -768,7 +768,7 @@ h2{
 	visibility: hidden;
 }
 /*--------------------SOCIAL BUTTON----------------------*/
-.section.section-socialbtn{
+.section_box.section_box-socialbtn{
 	padding: 10px;
 }
 .socialbtns li{

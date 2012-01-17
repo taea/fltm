@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 /*--------------------Reset----------------------*/
 html, body, h1, h2, h3, h4, h5, ul, ol, dl, li, dt, dd, p, header, hgroup, section, article, aside, hgroup, footer, figure, figcaption, nav, fieldset {
 	margin:0;
@@ -25,7 +24,6 @@ table{
 	border-spacing: 0;
 	empty-cells: show;
 }
-
 /*--------------------INITIALIZE----------------------*/
 body{
 	background:#F5F6F7;
@@ -57,7 +55,6 @@ display: inline-block;
 * html .clearfix ,* html .clear {height: 1%;}
 .clearfix, .clear {display: block;}
 /* End hide from IE-mac */
-
 /*--------------------COMMON-PARTS----------------------*/
 .num{
 	font-family: Arial, Helvetica,sans-serif;
@@ -885,6 +882,9 @@ th{
 	text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
 	-webkit-box-shadow:inset -1px 1px 0 rgba(255,255,255,0.3),inset 1px -1px 0 rgba(0,0,0,0.05);
 	-moz-box-shadow:inset -1px 1px 0 rgba(255,255,255,0.3),inset 1px -1px 0 rgba(0,0,0,0.05);
+}
+td{
+	font-size: 90%;
 }
 /*--------------------tab_nav----------------------*/
 .tab_nav{
@@ -3162,8 +3162,6 @@ p.album_comments{
 	visibility: hidden;
 }
 .basic_info .image{
-	margin-top: 10px;
-	float: right;
 	position: relative;
 	width: 262px;
 	
@@ -3172,7 +3170,6 @@ p.album_comments{
 	margin: 0;
 	padding: 0;
 	font-size: 11px;
-	margin-top:5px;
 	font-family: Arial, Helvetica,sans-serif;
 }
 .basic_info .image p a{
@@ -3281,6 +3278,14 @@ p.album_comments{
 	display: inline;
 	text-shadow: -1px -1px 0 rgba(0,0,0,0.8);
 }
+.basic_info_left{
+	float: left;
+	width:390px;
+}
+.basic_info_right{
+	float: right;
+	width: 260px;
+}
 .basic_info_title{
 	font-weight: bold;
 	font-size: 10px;
@@ -3293,20 +3298,12 @@ p.album_comments{
 	background: #222;
 	position: relative;
 }
-
-.basic_info_title_inner{
-	padding: 0;
-	height:52px;
-}
 .basic_info_title_inner:after{
 	content: ".";
 	display: block;
 	height: 0;
 	clear: both;
 	visibility: hidden;
-}
-.basic_info_hgroup{
-	overflow: hidden;
 }
 .basic_info_title h2{
 	padding:0;
@@ -3317,19 +3314,27 @@ p.album_comments{
 	padding-top: 3px;
 	padding-bottom: 1px;
 	margin-bottom: 2px;
+	line-height: 36px;
+	height: 36px;
+	display: block;
+	float: none;
 }
 .basic_info .tail{
 	width: 60px;
-	float: left;
 	overflow: hidden;
 }
 .basic_info_title h2 a{
 	color: #FFF;
 	background: none;
+	float: left;
 }
 .basic_info_title h2 a:hover{
 	color:#F7b52C;
 	text-decoration: none;
+}
+.basic_info_title h2 span.num{
+	font-size: 50%;
+	margin-left: 10px;
 }
 .basic_info_title h3{
 	padding: 0;
@@ -3390,7 +3395,6 @@ p.album_comments{
 	border-top:1px solid #000;
 	-webkit-box-shadow:inset 0px 1px 0 rgba(255,255,255,0.1);
 	-moz-box-shadow:inset 0px 1px 0 rgba(255,255,255,0.1);
-	padding-left: 60px;
 }
 .info_ex .socialbtns li{
 	padding-bottom: 0;
@@ -3416,6 +3420,12 @@ p.album_comments{
 	height: 0;
 	clear: both;
 	visibility: hidden;
+}
+.basic_info_right .list_link{
+	margin-top: 10px;
+}
+.basic_info_right .list_link a{
+	color:#F7b52C ;
 }
 /*--------------------NEWS----------------------*/
 .news_date{

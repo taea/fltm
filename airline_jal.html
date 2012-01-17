@@ -77,73 +77,66 @@ $(function(){
 					<div class="section section_profile">
 						<!-- div減らす　basic_info と　innerを一緒に -->
 						<div class="inner basic_info">
-							<div class="basic_info_title clear">
-								<div class="basic_info_title_inner">
-									<p class="tail"><a href="/airline_jal.html"><img src="/img/tail_l_noimage.png" alt="日本航空(JAL)" /></a></p>
-									<div class="basic_info_hgroup">
-										<h2><a href="/airline_jal.html">日本航空&nbsp;(JAL)</a></h2>
-										<h3><a href="/airline_jal.html">Japan Airlines</a></h3>
-									</div>
-								</div>
-								<ul class="socialbtns">
-									<li class="socialbtn-twitter">
-										<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="FlyTeamJp" data-related="FlyTeamNews:航空会社、マイレージ情報などのニュースをほぼ毎日お届け！" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js">
-									</script>
-									</li>
-									<li class="socialbtn-facebook">
-										<script src="http://connect.facebook.net/ja_JP/all.js#xfbml=1">
+							<div class="basic_info_left">
+								<div class="basic_info_title clear">
+									<h2><a href="/airline_jal.html">日本航空&nbsp;(JAL)<span class="num">Japan Airlines</span></a></h2>
+									<ul class="socialbtns">
+										<li class="socialbtn-twitter">
+											<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="FlyTeamJp" data-related="FlyTeamNews:航空会社、マイレージ情報などのニュースをほぼ毎日お届け！" data-lang="ja">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js">
 										</script>
-										<fb:like href="http://flyteam.jp/photo/EZY/Airbus-A319-111/84154" layout="button_count" show_faces="false" width="90"></fb:like>
-									</li>
-									<!-- はてぶカウントなしに変更 -->
-									<li class="socialbtn-hatena">
-				<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="simple" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
-									</li>
-									<li class="socialbtn-mixi">
-										<a href="http://mixi.jp/share.pl" class="mixi-check-button" data-key="d9814ccda8691473dedd21c34c862bd9d423dcbb">mixiチェック</a><script type="text/javascript" src="http://static.mixi.jp/js/share.js">
-									</script>
-									</li>
-									<!-- Googleあたらしくなってたので更新　ここはカウントなしに -->
-									<li class="socialbtn-google">
-										<g:plusone size="medium" count="false"></g:plusone>
-									</li>
-								</ul>
-								<ul class="letters num">
-									<li><a href="#">JL</a></li>
-									<li><a href="#">JAL</a></li>
-								</ul>
+										</li>
+										<li class="socialbtn-facebook">
+											<script src="http://connect.facebook.net/ja_JP/all.js#xfbml=1">
+											</script>
+											<fb:like href="http://flyteam.jp/photo/EZY/Airbus-A319-111/84154" layout="button_count" show_faces="false" width="90"></fb:like>
+										</li>
+										<!-- はてぶカウントなしに変更 -->
+										<li class="socialbtn-hatena">
+					<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="simple" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+										</li>
+										<li class="socialbtn-mixi">
+											<a href="http://mixi.jp/share.pl" class="mixi-check-button" data-key="d9814ccda8691473dedd21c34c862bd9d423dcbb">mixiチェック</a><script type="text/javascript" src="http://static.mixi.jp/js/share.js">
+										</script>
+										</li>
+										<!-- Googleあたらしくなってたので更新　ここはカウントなしに -->
+										<li class="socialbtn-google">
+											<g:plusone size="medium" count="false"></g:plusone>
+										</li>
+									</ul>
+								</div>
+								<div class="info_ex">
+									<dl>
+										<!-- /とる numつける　別名は英名の前に　名前はh2の方に移動 偶数にeven　dt dd構成　大幅変更 ！！！！要確認！！！！　-->
+										<dt>国：</dt>
+										<dd><a href="/area/asia/japan">日本</a></dd>
+										<dt class="even">アライアンス：</dt>
+										<dd class="even"><a href="/alliance/oneworld">ワンワールド</a></dd>
+										<dt>FFP：</dt>
+										<dd><a href="/ffp/jal-mileage-bank">JALマイレージバンク</a></dd>
+										<dt class="even">エアラインコード：</dt>
+										<!-- コードにnum /にあとに&nbsp; -->
+										<dd class="even"><a href="/airlines/airlinecode_iata/J">IATA</a>: JL&nbsp;/&nbsp;<a href="/airlines/airlinecode_icao/J">ICAO</a>: JAL</dd>
+										<dt class="website">Webサイト：</dt>
+										<dd class="website">
+											<!-- list_linkに -->
+											<ul  class="list_link">
+												<!-- sl 1つずつに分割  あり→取るｓ-->
+												<li><a href="http://www.jal.co.jp/" target="_blank">JAL</a><span class="sl">日本語</span><span class="sl">英語</span></li>
+												<li><a href="http://www.jal.com/" target="_blank">JAPAN AIRLINES Worldwide Sites</a><span class="sl">日本語</span><span class="sl">英語</span></li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
 							</div>
-							<div class="info_ex">
-								<dl>
-									<!-- /とる numつける　別名は英名の前に　名前はh2の方に移動 偶数にeven　dt dd構成　大幅変更 ！！！！要確認！！！！　-->
-									<dt>国：</dt>
-									<dd><a href="/area/asia/japan">日本</a></dd>
-									<dt class="even">アライアンス：</dt>
-									<dd class="even"><a href="/alliance/oneworld">ワンワールド</a></dd>
-									<dt>FFP：</dt>
-									<dd><a href="/ffp/jal-mileage-bank">JALマイレージバンク</a></dd>
-									<dt class="even">エアラインコード：</dt>
-									<!-- コードにnum /にあとに&nbsp; -->
-									<dd class="even"><a href="/airlines/airlinecode_iata/J">IATA</a>: JL&nbsp;/&nbsp;<a href="/airlines/airlinecode_icao/J">ICAO</a>: JAL</dd>
-									<dt class="website">Webサイト：</dt>
-									<dd class="website">
-										<!-- list_linkに -->
-										<ul  class="list_link">
-											<!-- sl 1つずつに分割  あり→取るｓ-->
-											<li><a href="http://www.jal.co.jp/" target="_blank">JAL</a><span class="sl">日本語</span><span class="sl">英語</span></li>
-											<li><a href="http://www.jal.com/" target="_blank">JAPAN AIRLINES Worldwide Sites</a><span class="sl">日本語</span><span class="sl">英語</span></li>
-										</ul>
-									</dd>
-								</dl>
-								<!-- ulをlist_linkに -->
+							<div class="basic_info_right">
+								<div class="image">
+									<a href="/photo/JAL/Boeing-777-346-ER/91062"><img src="http://img.flyteam.jp/img/photo/000/091/062/JAL-JA731J-Boeing-777-346-ER-NRT-91062_img_260_1430.jpg" alt="" /></a>
+									<p>Copyright ©<a href="/member/skyworld">ShoYoshizawaさん</a></p>
+								</div>
 								<ul class="list_link">
 									<li><a href="/airline/jal#hubs_airports">日本航空の拠点（ハブ）空港の一覧(8空港)</a></li>
 									<li><a href="/airline/jal#airline_children">日本航空の子会社一覧(6社)</a></li>
 								</ul>
-							</div>
-							<div class="image">
-								<a href="/photo/JAL/Boeing-777-346-ER/91062"><img src="http://img.flyteam.jp/img/photo/000/091/062/JAL-JA731J-Boeing-777-346-ER-NRT-91062_img_260_1430.jpg" alt="" /></a>
-								<p>Copyright ©<a href="/member/skyworld">ShoYoshizawaさん</a></p>
 							</div>
 						</div>
 					</div>

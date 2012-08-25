@@ -14,7 +14,38 @@
 <meta name="google-site-verification" content="GfKubQMuOpcnHlHRxZFWopO6y3BRY3g81yNT__ht6vY" />
 <meta property="og:image" content="http://flyteam.jp/img/logo.gif" />
 <meta name="mixi-check-robots" CONTENT="noimage">
-<meta property="fb:admins" content="100000515304404" /></head>
+<meta property="fb:admins" content="100000515304404" />
+
+<script type="text/javascript">
+jQuery(function($) {
+    // Global menu
+    $('#nav li').hover(function() {
+        $(this).addClass('hover');
+    }, function() {
+        $(this).removeClass('hover');
+    });
+
+    var eachTimeout = [],
+        target = $('#nav ul');
+
+    target.each(function(i) {
+        var $this = $(this);
+        $this.parent().hover(function() {
+            target.stop(true, false).fadeOut(150);
+            for ( var i=0; i<eachTimeout.length; i++ ) {
+                clearTimeout(eachTimeout[i]);
+            }
+            $this.stop(true, false).fadeIn(150);
+        }, function() {
+            eachTimeout[i] = setTimeout(function() {
+                $this.stop(true, false).fadeOut(150);
+            }, 300); 
+        });
+    });
+});
+</script>
+
+</head>
 	<body>
 		<div class="header">
 			<div class="header-cont">
@@ -36,16 +67,79 @@
 				</div>
 			</div>
 			<div class="global-nav">
-				<ul>
-					<li><a href="/news">ニュース</a></li>
-					<li><a href="/airlines">航空会社</a></li>
-					<li><a href="/airline_routes">路線</a></li>	
+				<ul id="nav">
+					<li><a href="/news">ニュース</a>
+						<ul class="dropdown-nav">
+							<li><a href="#">サブメニュー1</a></li>
+							<li><a href="#">サブメニュー2</a></li>
+							<li><a href="#">サブメニュー3</a></li>
+							<li><a href="#">サブメニュー4</a></li>
+							<li><a href="#">サブメニュー5</a></li>
+							<li><a href="#">サブメニュー6</a></li>
+						</ul>
+					</li>
+					<li><a href="/airlines">航空会社</a>
+						<ul class="dropdown-nav">
+							<li><a href="#">サブメニュー1</a></li>
+							<li><a href="#">サブメニュー2</a></li>
+							<li><a href="#">サブメニュー3</a></li>
+							<li><a href="#">サブメニュー4</a></li>
+							<li><a href="#">サブメニュー5</a></li>
+							<li><a href="#">サブメニュー6</a></li>
+						</ul>
+					</li>
+					<li><a href="/airline_routes">路線</a>
+						<ul class="dropdown-nav">
+							<li><a href="#">サブメニュー1</a></li>
+							<li><a href="#">サブメニュー2</a></li>
+							<li><a href="#">サブメニュー3</a></li>
+							<li><a href="#">サブメニュー4</a></li>
+							<li><a href="#">サブメニュー5</a></li>
+							<li><a href="#">サブメニュー6</a></li>
+						</ul>
+					</li>	
 					<li class="active"><a href="/airports">空港</a>
 					</li>
-					<li><a href="/aircrafts">機材</a></li>
-					<li><a href="/members">メンバー</a></li>
-					<li><a href="/photos">航空フォト</a></li>
-					<li><a href="/reviews">搭乗レビュー</a></li>
+					<li><a href="/aircrafts">機材</a>
+						<ul class="dropdown-nav">
+							<li><a href="#">サブメニュー1</a></li>
+							<li><a href="#">サブメニュー2</a></li>
+							<li><a href="#">サブメニュー3</a></li>
+							<li><a href="#">サブメニュー4</a></li>
+							<li><a href="#">サブメニュー5</a></li>
+							<li><a href="#">サブメニュー6</a></li>
+						</ul>
+					</li>
+					<li><a href="/members">メンバー</a>
+						<ul class="dropdown-nav">
+							<li><a href="#">サブメニュー1</a></li>
+							<li><a href="#">サブメニュー2</a></li>
+							<li><a href="#">サブメニュー3</a></li>
+							<li><a href="#">サブメニュー4</a></li>
+							<li><a href="#">サブメニュー5</a></li>
+							<li><a href="#">サブメニュー6</a></li>
+						</ul>
+					</li>
+					<li><a href="/photos">航空フォト</a>
+						<ul class="dropdown-nav">
+							<li><a href="#">サブメニュー1</a></li>
+							<li><a href="#">サブメニュー2</a></li>
+							<li><a href="#">サブメニュー3</a></li>
+							<li><a href="#">サブメニュー4</a></li>
+							<li><a href="#">サブメニュー5</a></li>
+							<li><a href="#">サブメニュー6</a></li>
+						</ul>
+					</li>
+					<li><a href="/reviews">搭乗レビュー</a>
+						<ul class="dropdown-nav">
+							<li><a href="#">サブメニュー1</a></li>
+							<li><a href="#">サブメニュー2</a></li>
+							<li><a href="#">サブメニュー3</a></li>
+							<li><a href="#">サブメニュー4</a></li>
+							<li><a href="#">サブメニュー5</a></li>
+							<li><a href="#">サブメニュー6</a></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 			<div class="sub-global-nav">
@@ -55,16 +149,6 @@
 					<li><a href="#">人気空港</a></li>
 					<li><a href="#">2レター</a></li>
 					<li><a href="#">3レター</a></li>
-				</ul>
-			</div>
-			<div class="dropdown-nav">
-				<ul>
-					<li><a href="#">サブメニュー1</a></li>
-					<li><a href="#">サブメニュー2</a></li>
-					<li><a href="#">サブメニュー3</a></li>
-					<li><a href="#">サブメニュー4</a></li>
-					<li><a href="#">サブメニュー5</a></li>
-					<li><a href="#">サブメニュー6</a></li>
 				</ul>
 			</div>
 		</div>
@@ -91,8 +175,8 @@
 					</div>
 					<div class="tab_nav">
 						<ul>
-							<li class="active"><a href="/airline_route/fuk_tpe">トップ</a></li>
-							<li><a href="/airline_route/fuk_tpe/news">ニュース (<span class="num">11</span>)</a></li>
+							<li><a href="/airline_route/fuk_tpe">トップ</a></li>
+							<li class="active"><a href="/airline_route/fuk_tpe/news">ニュース (<span class="num">11</span>)</a></li>
 							<li><a href="/airline_route/fuk_tpe/flight_schedule">時刻表</a></li>
 							<li><a href="/airline_route/fuk_tpe/map">地図</a></li>
 						</ul>
@@ -107,6 +191,14 @@
 						</ul>
 					</div>
 					<div class="section frame tab_after">
+						<div class="mini_tab_nav">
+							<ul>
+								<li class="active"><a>ミニタブ</a></li>
+								<li><a>見にたぶ</a></li>
+								<li><a>miniタブメニュー（<span class="num">11</span>）</a></li>
+								<li><a>サブメニュー</a></li>
+							</ul>
+						</div>
 						<br /><br /><br /><br /><br />
 					</div>
 					<div class="tab_nav">
